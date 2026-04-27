@@ -1,0 +1,100 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Courses Page {% endblock title %}
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="row g-4 mb-5">
+        <div class="col-lg-6 col-md-6 col-12" id="web_dev">
+            <div class="card h-100 border-0 p-3 me-5">
+                <img src="{% static "images/webdev4.jpg" %}" class="img-fluid rounded"alt="Web Development" style="height: 300px; object-fit: cover;">
+                <h2 class="mt-3">Web Development</h2>
+                <div class="d-flex flex-column">
+                    <a href="/web_dev" class="btn btn-outline-primary rounded">Start Learning</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12" id="graphic_design">
+            <div class="card h-100 border-0 p-3">
+                <img src="{% static "images/graphic2.jpeg" %}" class="img-fluid rounded" alt="Graphic Design" style="height: 300px; object-fit: cover;">
+                <h2 class="mt-3">Graphic Design</h2>
+                <div class="d-flex flex-column">
+                    <a href="/gdesign" class="btn btn-outline-primary rounded">Start Learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mb-5">
+        <div class="col-lg-6 col-md-6 col-12" id="app_dev">
+            <div class="card h-100 border-0 me-5 p-3">
+                <img src="{% static "images/phonedev4.jpg" %}" class="img-fluid rounded" alt="Mobile Development" style="height: 300px; object-fit: cover;">
+                <h2 class="mt-3">Mobile App Development</h2>
+                <div class="d-flex flex-column">
+                    <a href="/mobile_app" class="btn btn-outline-primary rounded">Start Learning</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12" id="data_sci">
+            <div class="card h-100 border-0 p-3">
+                <img src="{% static "images/data1.jpeg" %}" alt="data science" class="img-fluid rounded" style="height: 300px; object-fit: cover;">
+                <h2 class="mt-3">Data Science</h2>
+                <div class="d-flex flex-column">
+                    <a href="/data_science" class="btn btn-outline-primary rounded">Start Learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-lg-6 col-md-6 col-12" id="bus_market">
+            <div class="card h-100 border-0 p-3 me-5">
+                <img src="{% static "images/bus4.jpeg" %}" alt="Business and Marketing" class="img-fluid rounded" style="height: 300px; object-fit: cover;">
+                <h2 class="mt-3">Business and Marketing</h2>
+                <div class="d-flex flex-column">
+                    <a href="/business" class="btn btn-outline-primary rounded">Start Learning</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12" id="programming_basics">
+            <div class="card h-100 border-0 p-3">
+                <img src="{% static "images/pbasics2.jpg" %}" alt="Programming Basics" class="img-fluid rounded" style="height: 300px; object-fit: cover;">
+                <h2 class="mt-3">Programming Basics</h2>
+                <div class="d-flex flex-column">
+                    <a href="/programming_basics" class="btn btn-outline-primary rounded">Start Learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-12" id="computer_basics">
+            <div class="card h-100 border-0 p-3 me-5">
+                <img src="{% static "images/combasics2.jpeg" %}" alt="Computer Basics" class="img-fluid rounded" style="height: 300px; object-fit: cover;">
+                <h2 class="mt-3">Computer Basics</h2>
+                <div class="d-flex flex-column">
+                    <a href="/computer_basics" class="btn btn-outline-primary rounded">Start Learning</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12" id="ui_ux">
+            <div class="card h-100 border-0 p-3">
+                <img src="{% static "images/ui2.jpeg" %}" alt="UI/UX Design" class="img-fluid rounded" style="height: 300px; object-fit: cover;">
+                <h2 class="mt-3">UI/UX Design</h2>
+                <div class="d-flex flex-column">
+                    <a href="/ui_ux" class="btn btn-outline-primary rounded">Start Learning</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

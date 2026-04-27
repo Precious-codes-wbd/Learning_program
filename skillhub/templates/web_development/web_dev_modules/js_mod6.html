@@ -1,0 +1,102 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 6 : JavaScript Fundamentals{% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java3.jpeg" %}" id="function_declaration" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Function Declaration</h4>
+            <p>Functions are blocks of code that perform a task. Declared using the function keyword.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">function greet(){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("Hello, Precious!");</code> <br>
+                        <code class="text-warning-emphasis">}</code> <br>
+                        <code class="text-warning-emphasis">greet(); // Call the function. </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>
+                greet() - executes the code inside the function. <br id="function_parameters">
+                Functions help avoid repeating code.
+            </p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Function Parameters</h4>
+            <p>Parameters let you pass information into a function.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">function greetUser(name){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("Hello," + name + "!");</code> <br>
+                        <code class="text-warning-emphasis">}</code> <br>
+                        <code class="text-warning-emphasis">greetUser(Precious); // Hello, Precious!. </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="return_values">Parameters make your functions dynamic and flexible.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Return Values</h4>
+            <p>return allows a function to give a value back.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">function add(a,b){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">return a + b;</code> <br>
+                        <code class="text-warning-emphasis">}</code> <br>
+                        <code class="text-warning-emphasis">let sum = add(5, 3);</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log(sum); //8</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="arrow_functions">You can store the returned value in a variable.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Arrow Functions</h4>
+            <p>Shorter syntax for writing functions (ES6).</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const greet = (name) => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log(Hello, ${name}!);</code> <br>
+                        <code class="text-warning-emphasis">}</code> <br>
+                        <code class="text-warning-emphasis">greet("Precious"); // Hello, Precious!</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>For single-line functions, you can omit {} and return.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const add = (a, b) => a + b;</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log(add(5, 3)) //8</code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Functions organize code and avoid repetition. <br>
+                Parameters make functions flexible. <br>
+                Return values let functions give results back. <br>
+                Arrow functions = shorter, modern syntax.
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

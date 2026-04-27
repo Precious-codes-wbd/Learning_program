@@ -1,0 +1,229 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 4: The CSS Box Model {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/css2.jpeg" %}" id="box_model" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Understanding the Box Model</h4>
+            <p style="text-indent: 30px">Every HTML element is treated as a rectangular box. The box has 4 parts: </p>
+            <ul>
+                <li>Content - text, image, or other content inside the box.</li>
+                <li>Padding - space inside the box between content and border.</li>
+                <li>Border - line around the padding and content.</li>
+                <li id="padding">Margin - space outside the box, seperating it from other elements.</li>
+            </ul>     
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Padding</h4>
+            <p style="text-indent: 30px">Padding = space between content and border.</p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">p{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">padding : 20px; /* 20px space inside the box */</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">background-color: lightyellow;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">border: 1px solid black;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text">
+                        <p style="padding: 20px; border: 1px solid black; background-color: lightyellow;">This is a paragraph</p>
+                    </div>
+                </div>
+            </div>
+            <p>Can set top, right, bottom, left individually: </p>
+            <ul>
+                <li>padding-top : 10px;</li>
+                <li>padding-bottom : 10px;</li>
+                <li>padding-right : 15px;</li>
+                <li id="margin">padding-left : 15px;</li>
+            </ul>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Margin</h4>
+            <p style="text-indent: 30px">Margin = space outside the box.</p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;p&gt;This is a paragraph&lt;/p&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">div{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">margin : 20px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">background-color: lightblue;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="margin: 20px; background-color: lightblue;">
+                        <p>This is a paragraph</p>
+                    </div>
+                </div>
+            </div>
+            <p>Can also set each side individually: </p>
+            <ul>
+                <li>margin-top : 10px;</li>
+                <li>margin-right : 15px;</li>
+                <li>margin-bottom : 10px;</li>
+                <li>margin-left : 15px;</li>
+            </ul>
+            <p>Auto margins can center a block element horizontally: </p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;h2&gt;SkillHub&lt;/h2&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;p&gt;This is a paragraph&lt;/p&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">div{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">width : 200px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">margin: 0 auto/* centers the div */</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">border: 1px solid black;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text">
+                        <div style="margin: 0 auto; width: 200px; border: 1px solid black;">
+                            <h2>SkillHub</h2>
+                            <p id="border">This is a paragraph</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Border</h4>
+            <p style="text-indent: 30px">Border surrounds content + padding. CSS properties: border-width, border-style, border-color.</p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">p{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">padding: 10px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">border: 1px solid red;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">border-style: dashed;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text">
+                        <div>
+                            <p style="padding: 10px; border: 1px solid red; border-style: dashed;">This is a paragraph</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id="width_height">Border styles: solid, dotted, dashed, double, none.</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Width and Height</h4>
+            <p style="text-indent: 30px">Set the size of content area using width and height.</p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;p&gt;This is a paragraph&lt;/p&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">div{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">width : 300px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">height : 150px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">padding : 20px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">border: 5px solid black;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">margin : 10px;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="width: 300px; height: 150px; padding: 20px; border: 5px solid black; margin: 10px;">
+                        <p>This is a paragraph</p>
+                    </div>
+                </div>
+            </div>
+            <p>Total space taken = width + padding + border + margin.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Every element = box (content + padding + border + margin). <br>
+                Padding: inside space. <br>
+                Border: edge of the box. <br>
+                Margin: outside space. <br>
+                Width & height: size of the content. <br>
+                Understanding the box model is key for layout control. 
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

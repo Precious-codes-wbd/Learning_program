@@ -1,0 +1,188 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 3: Operators {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java3.jpeg" %}" id="arithmetic_operator" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Arithmetic Operators</h4>
+            <p>Arithmetic operators are used for math operations.</p>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                    <th>Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+</td>
+                        <td>Addition</td>
+                        <td>5 + 3 = 8</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Substraction</td>
+                        <td>5 - 3 = 2</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplication</td>
+                        <td>5 * 3 = 15</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Division</td>
+                        <td>15/3 = 5</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Modulus (remainder)</td>
+                        <td>10 % 3 = 1</td>
+                    </tr>
+                    <tr>
+                        <td>**</td>
+                        <td>Exponentiation</td>
+                        <td>2**3 = 8</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Example in JS: </p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let a = 10;</code> <br>
+                        <code class="text-warning-emphasis">let b = 3;</code> <br>
+                        <code class="text-warning-emphasis">console.log(a + b); //13 </code> <br>
+                        <code class="text-warning-emphasis">console.log(a - b); //7 </code> <br>
+                        <code id="comparison_operators" class="text-warning-emphasis">console.log(2 ** 3); //8 </code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Comparison Operators</h4>
+            <p>Used to compare values, result is true or false.</p>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                    <th>Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>==</td>
+                        <td>Equal</td>
+                        <td>5 == "5" - true</td>
+                    </tr>
+                    <tr>
+                        <td>===</td>
+                        <td>Strict equal</td>
+                        <td>5 === "5"- false</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>Not equal</td>
+                        <td>5 != 3 - true</td>
+                    </tr>
+                    <tr>
+                        <td>!==</td>
+                        <td>Strict not equal</td>
+                        <td>5 !== "5"</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>Greater than</td>
+                        <td>5 > 3 - true</td>
+                    </tr>
+                    <tr>
+                        <td><</td>
+                        <td>Less than</td>
+                        <td>5 < 3 - false</td>
+                    </tr>
+                    <tr>
+                        <td>>=</td>
+                        <td>Greater or equal</td>
+                        <td>5 >= 5 - true</td>
+                    </tr>
+                    <tr>
+                        <td><=</td>
+                        <td>Less or equal</td>
+                        <td>3 <= 5 - true</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Example in JS: </p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let x = 5;</code> <br>
+                        <code class="text-warning-emphasis">let y = 10;</code> <br>
+                        <code class="text-warning-emphasis">console.log(x < y); // true </code> <br>
+                        <code class="text-warning-emphasis">console.log(x === 5); // true</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Key Idea: <br id="logical_operators"> "===" is strict because it obeys both numbers and string, like the example given 5 === "5", both numbers are the same but one is a string and the other is a number, that is why the result is false. The same goes for "!===" : strict not equal.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Logical Operators</h4>
+            <p>Combine conditions and return true or false.</p>
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                    <th>Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&&</td>
+                        <td>AND (all true)</td>
+                        <td>true && false - false</td>
+                    </tr>
+                    <tr>
+                        <td>||</td>
+                        <td>or</td>
+                        <td>true || false - true</td>
+                    </tr>
+                    <tr>
+                        <td>!</td>
+                        <td>Not (invert)</td>
+                        <td>!true - false</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Example in JS: </p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let isStudent = true;</code> <br>
+                        <code class="text-warning-emphasis">let hasID = false;</code> <br>
+                        <code class="text-warning-emphasis">console.log(isStudent && hasID); // false </code> <br>
+                        <code class="text-warning-emphasis">console.log(!isStudent); // false</code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Arithmetic Operators: +, -, *, /, % <br>
+                Comparison Operators: ==, ===, !=, !==, >, <, >=, <= <br>
+                Logical Oprators: &&(and), ||(or), !(not) <br>
+                Operators are the building blocks of programming logic. 
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

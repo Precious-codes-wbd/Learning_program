@@ -1,0 +1,199 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 3: Colors and Test Styling {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/css2.jpeg" %}" id="css_colors" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> CSS Colors</h4>
+            <p style="text-indent: 30px">CSS allows you to change the color of text, backgrounds, and other elements. You can use named colors, HEX codes, RGB, or HSL.</p>
+            <p>Examples: </p>
+            <ol>
+                <li>Named color: 
+                    <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-primary-emphasis">p{ </code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;">color: red; </code> <br>
+                                <code class="text-primary-emphasis">} </code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>HEX code:
+                    <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-primary-emphasis">p{ </code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;">color: #ff5733; </code> <br>
+                                <code class="text-primary-emphasis">} </code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>RGB: 
+                    <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-primary-emphasis">p{ </code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;">color: rgb(255, 87, 51); </code> <br>
+                                <code class="text-primary-emphasis">} </code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>HSL:
+                    <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-primary-emphasis">p{ </code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;">color: hsl(10, 100%, 60%); </code> <br>
+                                <code class="text-primary-emphasis" id="background_colors">} </code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Background Colors</h4>
+            <p style="text-indent: 30px">Use background color to color the background of elements.</p>
+            <p>Example: </p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;This is a paragraph&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;span&gt;A span text&lt;/span&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">div{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">background-color: lightblue;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 22rem; margin: 20px 40px;">
+                <div class="card-body" style="background-color: lightblue;">
+                    <div class="card-text col-md-12">
+                        <p>This is a paragraph</p>
+                        <span >A span text</span>
+                    </div>
+                </div>
+            </div>
+            <p id="font_family">Works with any HTML element (div, p, header, section, e.t.c)</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Font Family</h4>
+            <p style="text-indent: 30px">Control the type of font using font family. Always provide a fallback font in case the first one isn't available.</p>
+            <p>Example: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">div{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">font-family: Arial, sans-serif; </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="font_size">"Arial" - primary font. <br> "sans-serif" - fallback.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Font Size</h4>
+            <p style="text-indent: 30px">Change size of text using font-size.</p>
+            <p>Example: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">h2{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">font-size: 36px; </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br> <br>
+                        <code class="text-primary-emphasis">p{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">font-size: 60rem; </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="text_alignment_decoration">Can use px, em, rem, or %.</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Text Alignment and Decoration</h4>
+            <p>Text Alignment: </p>
+            <div class="card mb-3" style="max-width: 35rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">h1{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">text-align: center;/* left, right, center, justify */ </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Text Decoration: <br> In your index.html: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;a href="#"&gt;A link&lt;/a&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;A normal text&lt;/p&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 35rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">a{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">text-decoration: none;/* remove underlines from links */ </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br> <br> 
+                        <code class="text-primary-emphasis">p{ </code> <br> 
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">text-decoration: underline; </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text">
+                        <a href="#" style="text-decoration: none;">A link</a>
+                        <p style="text-decoration: underline">A normal text</p>
+                    </div>
+                </div>
+            </div>
+            <p>Text-transform - uppercase, lowercase, capitalize <br> Letter-spacing - space between letters (use px).</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Colors: text, background, borders. <br>
+                Font-family & size: control text appearance. <br>
+                Text-alignment & decoration: style text position, underline, capitalization. <br>
+                CSS enhances readability and presentation.
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}

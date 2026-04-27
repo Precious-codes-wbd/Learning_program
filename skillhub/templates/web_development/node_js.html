@@ -1,0 +1,147 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Node.js and Express Page {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/node1.jpeg" %}" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <h1 style="font-family: 'Poppins', sans-serif;" class="mb-3">Node.js and Express</h1>
+
+        <div class="accordion" id="accordionExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module8" aria-expanded="false" aria-controls="collapseThree">
+                    Module 1: Introduction to Node.js
+                </button>
+                </h2>
+                <div id="module8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: What is Node.js?</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: Installing Node.js</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: Node.js Architecture</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 4: Running JavaScript on the Server</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module2" aria-expanded="false" aria-controls="collapseThree">
+                    Module 2: Node.js Basics
+                </button>
+                </h2>
+                <div id="module2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: Modules</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: File System</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: NPM(Node Package Manager)</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 4: Creating a Basic Server</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module3" aria-expanded="false" aria-controls="collapseThree">
+                    Module 3: Introduction to Express
+                </button>
+                </h2>
+                <div id="module3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: What is Express.js</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: Setting up Express</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: Routing</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 4: Middleware</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module4" aria-expanded="false" aria-controls="collapseThree">
+                    Module 4: Working with Database
+                </button>
+                </h2>
+                <div id="module4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: Connecting to MongoDB</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: Mongoose Basics</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: CRUD Operations</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 4: Data Validation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module5" aria-expanded="false" aria-controls="collapseThree">
+                    Module 5: Authentication
+                </button>
+                </h2>
+                <div id="module5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: User Registration</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: Login System</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: JWT Authentication</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 4: Password Hashing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module6" aria-expanded="false" aria-controls="collapseThree">
+                    Module 6: REST API Development
+                </button>
+                </h2>
+                <div id="module6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: API Design</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: Creating REST APIs</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: Error Handling</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 4: Testing APIs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module7" aria-expanded="false" aria-controls="collapseThree">
+                    Module 7: Deployment
+                </button>
+                </h2>
+                <div id="module7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: Environment Variables</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: Hosting Node Apps</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: Deploying to Cloud Platforms</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,156 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 4: Forms in Bootstrap {% endblock title %}
+
+{% block content %}
+    <div>
+        <img src="{% static "images/boostrap2.jpeg" %}" alt="Image not found" id="form_inputs" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Form Inputs</h4>
+            <p style="text-indent: 30px;">Bootstrap styles form inputs automatically for a clean look.</p>
+            <div class="card mb-3" style="max-width: 55rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;form&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;div class="mb-3"&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;label for="name" class="form-label"&gt;Name&lt;/label&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;input type="text" class="form-control" id="name" placeholder="Enter your name"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;div class="mb-3"&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;input type="email" class="form-control" id="email" placeholder="Enter your email"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/form&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </div>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" name="" id="name" class="form-control" placeholder="Enter your name"/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="" id="email" class="form-control" placeholder="Enter your email"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>   
+               </div>
+            </div>
+            <p>Classes explained: <br> form-control - styles input fileds. <br> mb-3 - adds margin-bottom. <br id="form_layouts"> btn btn-primary - styled submit button.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Form Layouts</h4>
+            <p style="text-indent: 30px;">Inline forms: inputs appears in a row.</p>
+            <div class="card mb-3" style="max-width: 55rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;form class="row g-3"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;div class="col-auto"&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;input type="text" class="form-control" placeholder="Username"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;div class="col-auto"&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;button type="submit" class="btn btn-primary mb-3"&gt;Submit&lt;/button&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/form&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </div>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <form class="row g-3">
+                        <div class="col-auto">
+                            <input type="text" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" id="form_validation" class="btn btn-primary mb-3">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Form Validation</h4>
+            <p style="text-indent: 30px;">Bootstrap makes validation easy.</p>
+            <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;form class="needs-validation" novalidate&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;div class="mb-3"&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;input type="email" class="form-control" id="email" required&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;div class="invalid-feedback"&gt;</code> <br>
+                        <code style="margin-left: 80px;">Please enter a valid email.</code> <br>
+                        <code style="margin-left: 60px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/form&gt;</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">&lt;script&gt;</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">// Example: simple validation</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">(() => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 60px;">'use strict'</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 60px;">const forms = document.querySelectorAll('.needs-validation)</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 60px;">Array.from(forms).forEach(form => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 80px;">form.addEventListener('submit', event => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 100px;">if (!form.checkValidity()) {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 120px;">event.preventDefault()</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 120px;">event.stopPropagation()</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 100px;">}</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 100px;">form.classList.add('was-validated)</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 80px;">}, false)</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 60px;">})</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">})()</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">&lt;/script&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </div>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <form class="needs-validation novalidate">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="" id="email" class="form-control" required/>
+                        </div>
+                        <div class="mb-3">
+                            Please enter a valid email.
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <p>required- field must be filled. <br> invalid-feedback - message when input is invalid. <br> was-validated - triggers Bootstrap styling.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Form input: styled with form-control. <br>
+                Layouts: inline or grid for neat arrangement. <br>
+                Validation: built-in, shows feedback when invalid. <br>
+                Bootstrap forms are responsive and visually appealing.
+            </p>
+        </div>    
+
+    </div>
+
+
+{% endblock content %}

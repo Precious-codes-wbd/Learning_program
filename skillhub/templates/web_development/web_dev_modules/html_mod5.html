@@ -1,0 +1,150 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Modules 5: Images and Media {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/html1.jpeg" %}" id="adding_images" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Adding Images <code style="color: var(--text-color)">&lt;img&gt;</code></h4>
+            <p style="text-indent: 20px">The <code style="color: var(--text-color)">&lt;img&gt;</code> tag is used to display images on a webpage.</p>
+            <div class="card" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center">
+                        <code>&lt;img src="image.jpg" alt="A beautiful scene"&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <img src="{% static "images/html1.jpeg" %}" alt="A beautiful scene" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                </div>
+            </div>
+            <p>src - path to the image. <br> alt - text shows if image fails to load (also for accessibility). <br> Self-closing - no <code style="color: var(--text-color)" id="image_attributes">&lt;/img&gt;</code></p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Image Attributes (src, alt, width, height)</h4>
+            <p>You can control the size and accessibility: </p>
+            <div class="card" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center">
+                        <code>&lt;img src="image.jpg" alt="A beautiful scene" width="300" height="200"&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>width and height - in pixels. <br> Keep alt for screen readers and SEO.</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-center">
+                        <img src="{% static "images/html1.jpeg" %}" alt="A beautiful scene" width="300" height="200">
+                    </div>
+                </div>
+            </div>
+            <span id="image_paths"></span>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Image Paths (Relative vs Absolute)</h4>
+            <p>Relative Path - Files in your project folder.</p>
+            <div class="card" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center">
+                        <code>&lt;img src="images/photo.jpg" alt="My Photo"&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Absolute Path - Full URL from internet.</p>
+             <div class="card" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center" id="adding_videos">
+                        <code>&lt;img src="https://example.com/photo.jpg" alt="Online Photo"&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Adding Videos</h4>
+            <p>Use <code style="color: var(--text-color)">&lt;video&gt;: </code></p>
+            <div class="card" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;video width="320" height="240" controls&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;source src="movie.mp4" type="video/mp4"&gt;</code> <br>
+                        <code style="margin-left: 20px">Your browser does not support the video tag. <br> &lt;/video&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-center">
+                        <video width="320" height="240" controls><source src="movie.mp4" type="movie/mp4">Your browser does not support the video tag.</video>
+                    </div>
+                </div>
+            </div>
+            <p id="adding_audio">Controls - shows play, pause buttons. <br> <code style="color: var(--text-color)">&lt;source&gt;</code> - video type and file.</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Adding Audio</h4>
+            <p>Use <code style="color: var(--text-color)">&lt;audio&gt;: </code></p>
+            <div class="card" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;audio controls&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;source src="song.mp3" type="audio/mpeg"&gt;</code> <br>
+                        <code style="margin-left: 20px">Your browser does not support the audio element.<br> &lt;/audio&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-center">
+                        <audio controls><source src="song.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+                    </div>
+                </div>
+            </div>
+            <p>Controls - play/pause buttons. <br> <code style="color: var(--text-color)">&lt;source&gt;</code> - audio file.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                <code style="color: var(--text-color)">&lt;img&gt;</code> - display images(src, alt, width, height).<br>
+                Relative vs absolute paths - project vs web. <br>
+                <code style="color: var(--text-color)">&lt;video&gt;</code> - display video with controls. <br>
+                <code style="color: var(--text-color)">&lt;audio&gt;</code> - play audio with controls.
+            </p>
+        </div>
+
+        <div class="step" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 40px;">
+            <h3 style="font-family: 'Poppins', sans-serif;">Steps to Adding Images, Videos and Audio to your Folder: </h3>
+            <ol>
+                <li>Go to File Explorer, copy the image you want to use.</li>
+                <li>Then go to your folder(Project) in documents, create a folder and name it 'Images'.</li>
+                <li>Then paste the image copied.</li>
+                <li>Since it is in a folder, you have to call it differently : 
+                    <ul>
+                        <li>Since the name of your image folder is 'Images', and let's say the name of your image is picture.jpeg.</li>
+                        <li>You call it thus: <code>&lt;img src="Images/picture.jpeg" alt="My Picture"&gt;</code></li>
+                    </ul>
+                </li>
+                <li>Do the same for videos and audio.</li>
+            </ol>
+        </div>
+    </div>
+
+{% endblock content %}

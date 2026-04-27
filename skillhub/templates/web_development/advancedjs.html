@@ -1,0 +1,124 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Advanced JavaScript (ES6+) / DOM Manipulation Page {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java2.jpeg" %}" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <h1 style="font-family: 'Poppins', sans-serif;" class="mb-3">Advanced Javascript (ES6+) / DOM Manipulation</h1>
+
+        <div class="accordion" id="accordionExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module8" aria-expanded="false" aria-controls="collapseThree">
+                    Module 1: Understanding the DOM
+                </button>
+                </h2>
+                <div id="module8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: What is the DOM?</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: DOM Tree Structure</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: Selecting Elements</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module2" aria-expanded="false" aria-controls="collapseThree">
+                    Module 2: DOM Selection Methods
+                </button>
+                </h2>
+                <div id="module2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: getElementById()</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: querySelector()</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: querySelectorAll()</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module3" aria-expanded="false" aria-controls="collapseThree">
+                    Module 3: Changing Page Content
+                </button>
+                </h2>
+                <div id="module3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: Changing Text (innerText)</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: Changing HTML (innerHTML)</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: Changing Styles</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module4" aria-expanded="false" aria-controls="collapseThree">
+                    Module 4: Event Handling
+                </button>
+                </h2>
+                <div id="module4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: Click Events</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: Mouse Events</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: Keyboard Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module5" aria-expanded="false" aria-controls="collapseThree">
+                    Module 5: Creating and Removing
+                </button>
+                </h2>
+                <div id="module5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: Creating Elements</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: Appending Elements</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: Removing Elements</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module6" aria-expanded="false" aria-controls="collapseThree">
+                    Module 6: Interactive Projects
+                </button>
+                </h2>
+                <div id="module6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 1: Image Slider</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 2: To-do List App</a></li>
+                            <li><a href="##" class="text-decoration-none text-black">Lesson 3: Modal Popup</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}

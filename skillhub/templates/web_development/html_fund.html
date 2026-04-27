@@ -1,0 +1,201 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} HTML Fundamentals Page {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/html1.jpeg" %}" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+        <h1 style="font-family: 'Poppins', sans-serif;" class="mb-3">HTML Fundamentals</h1>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module1" aria-expanded="false" >
+                    Module 1: Introduction
+                </button>
+                </h2>
+                <div id="module1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="html_fundamental_module1#html_definition" class="text-decoration-none text-black">Lesson 1: What is HTML?</a></li>
+                            <li><a href="html_fundamental_module1#how_website_works" class="text-decoration-none text-black">Lesson 2: How Websites work (browser + server)</a></li>
+                            <li><a href="html_fundamental_module1#web_browsers" class="text-decoration-none text-black">Lesson 3: Web Browsers and Servers</a></li>
+                            <li><a href="html_fundamental_module1#installation" class="text-decoration-none text-black">Lesson 4: Setting Up a Code Editor (VS Code)</a></li>
+                            <li><a href="html_fundamental_module1#creating_first_htmlfile" class="text-decoration-none text-black" >Lesson 5: Creating your First HTML File</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module2" aria-expanded="false" aria-controls="collapseThree">
+                    Module 2: HTML Document Structure
+                </button>
+                </h2>
+                <div id="module2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                       <ul>
+                            <li><a href="html_fundamental_module2#DOCTYPE" class="text-decoration-none text-black">Lesson 1: Understanding <code>&lt;!DOCTYPE html&gt;</code></a></li>
+                            <li><a href="html_fundamental_module2#Html_tag" class="text-decoration-none text-black">Lesson 2: The <code>&lt;html&gt;</code> tag</a></li>
+                            <li><a href="html_fundamental_module2#Head_tag" class="text-decoration-none text-black">Lesson 3: The <code>&lt;head&gt;</code> section</a></li>
+                            <li><a href="html_fundamental_module2#Title_tag" class="text-decoration-none text-black">Lesson 4: The <code>&lt;title&gt;</code> tag</a></li>
+                            <li><a href="html_fundamental_module2#Body_tag" class="text-decoration-none text-black">Lesson 5: The <code>&lt;body&gt;</code> section</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module3" aria-expanded="false" aria-controls="module3">
+                    Module 3: Text and Headings
+                </button>
+                </h2>
+                <div id="module3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="html_fundamental_module3#headings" class="text-decoration-none text-black">Lesson 1: HTML Headings (<code class="text-black">&lt;h1&gt;</code> to <code class="text-black">&lt;h6&gt;</code>)</a></li>
+                            <li><a href="html_fundamental_module3#paragraphs" class="text-decoration-none text-black">Lesson 2: Paragraphs <code>(&lt;p&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module3#line_break" class="text-decoration-none text-black">Lesson 3: Line Breaks <code>(&lt;br&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module3#horizontal_line" class="text-decoration-none text-black">Lesson 4: Horizontal Lines <code>(&lt;hr&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module3#text_formatting" class="text-decoration-none text-black">Lesson 5: Text Formatting <code>(&lt;b&gt;, &lt;i&gt;, &lt;strong&gt;)</code></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module4" aria-expanded="false" aria-controls="module4">
+                    Module 4: Links and Navigation
+                </button>
+                </h2>
+                <div id="module4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="html_fundamental_module4#creating_links" class="text-decoration-none text-black">Lesson 1: Creating Links <code>(&lt;a&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module4#external_websites" class="text-decoration-none text-black">Lesson 2: Linking to External Websites</a></li>
+                            <li><a href="html_fundamental_module4#pages_within_your_site" class="text-decoration-none text-black">Lesson 3: Linking to Pages within your Site</a></li>
+                            <li><a href="html_fundamental_module4#links_in_new_tab" class="text-decoration-none text-black">Lesson 4: Opening Links in New Tabs</a></li>
+                            <li><a href="html_fundamental_module4#navigation_menus" class="text-decoration-none text-black">Lesson 5: Creating Navigation Menus</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module5" aria-expanded="false" aria-controls="module5">
+                    Module 5: Images and Media
+                </button>
+                </h2>
+                <div id="module5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="html_fundamental_module5#adding_images" class="text-decoration-none text-black">Lesson 1: Adding Images <code>(&lt;img&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module5#image_attributes" class="text-decoration-none text-black">Lesson 2: Images Attributes (src, alt, width, height)</a></li>
+                            <li><a href="html_fundamental_module5#image_paths" class="text-decoration-none text-black">Lesson 3: Image Paths (relative vs absolute)</a></li>
+                            <li><a href="html_fundamental_module5#adding_videos" class="text-decoration-none text-black">Lesson 4: Adding Videos</a></li>
+                            <li><a href="html_fundamental_module5#adding_audio" class="text-decoration-none text-black">Lesson 5: Adding Audio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module6" aria-expanded="false" aria-controls="module6">
+                    Module 6: Lists
+                </button>
+                </h2>
+                <div id="module6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="html_fundamental_module6#ordered_list" class="text-decoration-none text-black">Lesson 1: Ordered Lists <code>(&lt;ol&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module6#unordered_list" class="text-decoration-none text-black">Lesson 2: Unordered Lists <code>(&lt;ul&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module6#nested_list" class="text-decoration-none text-black">Lesson 3: Nested Lists</a></li>
+                            <li><a href="html_fundamental_module6#real_life_example" class="text-decoration-none text-black">Lesson 4: Real-life Examples of Lists</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module7" aria-expanded="false" aria-controls="module7">
+                    Module 7: Tables
+                </button>
+                </h2>
+                <div id="module7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="html_fundamental_module7#creating_table" class="text-decoration-none text-black">Lesson 1: Creating a Table <code>(&lt;table&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module7#table_rows" class="text-decoration-none text-black">Lesson 2: Table Rows <code>(&lt;tr&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module7#table_headings" class="text-decoration-none text-black">Lesson 3: Table Headings <code>(&lt;th&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module7#table_data" class="text-decoration-none text-black">Lesson 4: Table Data <code>(&lt;td&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module7#styling_tables" class="text-decoration-none text-black">Lesson 5: Styling and Organizing Tables</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module8" aria-expanded="false" aria-controls="module8">
+                    Module 8: Forms and Inputs
+                </button>
+                </h2>
+                <div id="module8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="html_fundamental_module8#Introducing_forms" class="text-decoration-none text-black">Lesson 1: Introduction to Forms</a></li>
+                            <li><a href="html_fundamental_module8#text_inputs" class="text-decoration-none text-black">Lesson 2: Text Inputs</a></li>
+                            <li><a href="html_fundamental_module8#radiobuttons_checkboxes" class="text-decoration-none text-black">Lesson 3: Radio Buttons and Checkboxes</a></li>
+                            <li><a href="html_fundamental_module8#dropdown_menus" class="text-decoration-none text-black">Lesson 4: Dropdown Menus (<code>&lt;select&gt;</code>)</a></li>
+                            <li><a href="html_fundamental_module8#submit_buttons" class="text-decoration-none text-black">Lesson 5: Submit Buttons</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module9" aria-expanded="false" aria-controls="module9">
+                    Module 9: Semantic HTML
+                </button>
+                </h2>
+                <div id="module9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="html_fundamental_module9#semantic_html" class="text-decoration-none text-black">Lesson 1: What is Semantic HTML?</a></li>
+                            <li><a href="html_fundamental_module9#header" class="text-decoration-none text-black">Lesson 2: <code>(&lt;header&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module9#section" class="text-decoration-none text-black">Lesson 3: <code>(&lt;section&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module9#article" class="text-decoration-none text-black">Lesson 4: <code>(&lt;article&gt;)</code></a></li>
+                            <li><a href="html_fundamental_module9#footer" class="text-decoration-none text-black">Lesson 5: <code>(&lt;footer&gt;)</code></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module10" aria-expanded="false" aria-controls="module10">
+                    Module 10: Final Project
+                </button>
+                </h2>
+                <div id="module10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="html_fundamental_module10#plan_webpage" class="text-decoration-none text-black">Lesson 1: Planning your Webpage</a></li>
+                            <li><a href="html_fundamental_module10#create_webpage" class="text-decoration-none text-black">Lesson 2: Creating a Personal Webpage</a></li>
+                            <li><a href="html_fundamental_module10#add_images_links" class="text-decoration-none text-black">Lesson 3: Adding Images and Links</a></li>
+                            <li><a href="html_fundamental_module10#organizing_content" class="text-decoration-none text-black">Lesson 4: Organizing Content</a></li>
+                            <li><a href="html_fundamental_module10#publish_page" class="text-decoration-none text-black">Lesson 5: Publishing your Page</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock content %}

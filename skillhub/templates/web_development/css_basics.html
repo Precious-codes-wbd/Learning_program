@@ -1,0 +1,155 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} CSS Basics for Layout Page{% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/css2.jpeg" %}" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <h1 style="font-family: 'Poppins', sans-serif;" class="mb-3">CSS Basics for Layout</h1>
+
+        <div class="accordion" id="accordionExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module1" aria-expanded="false" aria-controls="module1">
+                    Module 1: Introduction to CSS
+                </button>
+                </h2>
+                <div id="module1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="css_basics_module1#css_definition" class="text-decoration-none text-black">Lesson 1: What is CSS?</a></li>
+                            <li><a href="css_basics_module1#css_with_html" class="text-decoration-none text-black">Lesson 2: How CSS Works with HTML</a></li>
+                            <li><a href="css_basics_module1#adding_css" class="text-decoration-none text-black">Lesson 3: Ways to add CSS (Inline, Internal, External)</a></li>
+                            <li><a href="css_basics_module1#creating_first_cssfile" class="text-decoration-none text-black">Lesson 4: Setting up your First CSS File</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module2" aria-expanded="false" aria-controls="collapseThree">
+                    Module 2: CSS Selectors
+                </button>
+                </h2>
+                <div id="module2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="css_basics_module2#element_selectors" class="text-decoration-none text-black">Lesson 1: Element Selectors</a></li>
+                            <li><a href="css_basics_module2#class_selectors" class="text-decoration-none text-black">Lesson 2: Class Selectors</a></li>
+                            <li><a href="css_basics_module2#id_selectors" class="text-decoration-none text-black">Lesson 3: ID Selectors</a></li>
+                            <li><a href="css_basics_module2#grouping_selectors" class="text-decoration-none text-black">Lesson 4: Grouping Selectors</a></li>
+                            <li><a href="css_basics_module2#descendant_selectors" class="text-decoration-none text-black">Lesson 5: Descendant Selectors</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module3" aria-expanded="false" aria-controls="collapseThree">
+                    Module 3: Color and Text Styling
+                </button>
+                </h2>
+                <div id="module3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="css_basics_module3#css_colors" class="text-decoration-none text-black">Lesson 1: CSS Colors</a></li>
+                            <li><a href="css_basics_module3#background_colors" class="text-decoration-none text-black">Lesson 2: Background Colors</a></li>
+                            <li><a href="css_basics_module3#font_family" class="text-decoration-none text-black">Lesson 3: Font Family</a></li>
+                            <li><a href="css_basics_module3#font_size" class="text-decoration-none text-black">Lesson 4: Font Size</a></li>
+                            <li><a href="css_basics_module3#text_alignment_decoration" class="text-decoration-none text-black">Lesson 5: Text Alignment and Decoration</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module4" aria-expanded="false" aria-controls="collapseThree">
+                    Module 4: The CSS Box Model
+                </button>
+                </h2>
+                <div id="module4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="css_basics_module4#box_model" class="text-decoration-none text-black">Lesson 1: Understanding the Box Model</a></li>
+                            <li><a href="css_basics_module4#padding" class="text-decoration-none text-black">Lesson 2: Padding</a></li>
+                            <li><a href="css_basics_module4#margin" class="text-decoration-none text-black">Lesson 3: Margin</a></li>
+                            <li><a href="css_basics_module4#border" class="text-decoration-none text-black">Lesson 4: Border</a></li>
+                            <li><a href="css_basics_module4#width_height" class="text-decoration-none text-black">Lesson 5: Width and Height</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module5" aria-expanded="false" aria-controls="collapseThree">
+                    Module 5: Layout Basics
+                </button>
+                </h2>
+                <div id="module5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="css_basics_module5#display_property" class="text-decoration-none text-black">Lesson 1: Display Property</a></li>
+                            <li><a href="css_basics_module5#blockvsinline_element" class="text-decoration-none text-black">Lesson 2: Block vs Inline Elements</a></li>
+                            <li><a href="css_basics_module5#position_property" class="text-decoration-none text-black">Lesson 3: Position Property</a></li>
+                            <li><a href="css_basics_module5#overflow" class="text-decoration-none text-black">Lesson 4: Overflow</a></li>
+                            <li><a href="css_basics_module5#visibility" class="text-decoration-none text-black">Lesson 5: Visibility</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module6" aria-expanded="false" aria-controls="collapseThree">
+                    Module 6: Flexbox Layout 
+                </button>
+                </h2>
+                <div id="module6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="css_basics_module6#flexbox_introduction" class="text-decoration-none text-black">Lesson 1: Introduction to Flexbox</a></li>
+                            <li><a href="css_basics_module6#flex_container" class="text-decoration-none text-black">Lesson 2: Flex Container</a></li>
+                            <li><a href="css_basics_module6#flex_direction" class="text-decoration-none text-black">Lesson 3: Flex Direction</a></li>
+                            <li><a href="css_basics_module6#justify_content" class="text-decoration-none text-black">Lesson 4: Justify Content</a></li>
+                            <li><a href="css_basics_module6#align_items" class="text-decoration-none text-black">Lesson 5: Align Elements</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#module7" aria-expanded="false" aria-controls="collapseThree">
+                    Module 7: CSS Grid
+                </button>
+                </h2>
+                <div id="module7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="css_basics_module7#grid_introduction" class="text-decoration-none text-black">Lesson 1: Introduction to CSS Grid</a></li>
+                            <li><a href="css_basics_module7#grid_container" class="text-decoration-none text-black">Lesson 2: Grid Container</a></li>
+                            <li><a href="css_basics_module7#grid_rows_columns" class="text-decoration-none text-black">Lesson 3: Grid Rows and Columns</a></li>
+                            <li><a href="css_basics_module7#grid_gaps" class="text-decoration-none text-black">Lesson 4: Grip Gaps</a></li>
+                            <li><a href="css_basics_module7#building_layouts_with_grid" class="text-decoration-none text-black">Lesson 5: Building Layouts with Grid</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock content %}

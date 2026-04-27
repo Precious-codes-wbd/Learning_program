@@ -1,0 +1,104 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 4: Control Structures {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java3.jpeg" %}" id="if_statement" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> If Statements</h4>
+            <p>If statements execute code only if a condition is true.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let age = 17;</code> <br>
+                        <code class="text-warning-emphasis">if (age >= 18){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("You are an adult");</code> <br>
+                        <code class="text-warning-emphasis">};</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="else_elseif">If age is < 18, nothing happens. Curly brackets {} are used to group code that runs if true.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Else and Else-if</h4>
+            <p>else runs code if the condition is false.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let age = 17;</code> <br>
+                        <code class="text-warning-emphasis">if (age >= 18){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("You are an adult");</code> <br>
+                        <code class="text-warning-emphasis">} else{</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("You are not an adult");</code> <br>
+                        <code class="text-warning-emphasis">}; // Output: not adult</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>else if allows multiple conditions</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let score = 75;</code> <br>
+                        <code class="text-warning-emphasis">if (age >= 90){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("A");</code> <br>
+                        <code class="text-warning-emphasis">} else if (score >= 70){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("B");</code> <br>
+                        <code class="text-warning-emphasis">};</code> <br>
+                        <code class="text-warning-emphasis">} else{</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("C");</code> <br>
+                        <code class="text-warning-emphasis" id="switch_statements">}; // Output: B</code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Switch Statements</h4>
+            <p>switch statements are used when they are many possible values.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let day = 3;</code> <br>
+                        <code class="text-warning-emphasis">switch(day){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">case 1:</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">console.log("Monday");</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">break;</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">case 2:</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">console.log("Tuesday");</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">break;</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">case 3:</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">console.log("Wednesday");</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">break;</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">default:</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px;">console.log("Another day");</code> <br>
+                        <code class="text-warning-emphasis">};</code> <br>
+                        <code class="text-warning-emphasis">// Output: Wednesday</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>break stops the code from running into the next case. <br> default runs if no cases match.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                if - run code if true. <br>
+                else - runs code if false. <br>
+                else if - multiple conditions. <br>
+                switch - choose from many options. <br>
+                Control structures let your program make decisions. 
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}

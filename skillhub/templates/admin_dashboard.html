@@ -1,0 +1,15 @@
+{% extends "admin_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Admin Dashboard {% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h3 class="mt-3">Welcome Admin {{ user.signup.name }}</h3>
+        <p>Email: {{ user.signup.email }}</p>
+    </div>
+    
+    <div style="margin: 250px;"><h1>Still Working on it!!!!!!!!!!!!!</h1></div>
+
+{% endblock content %}

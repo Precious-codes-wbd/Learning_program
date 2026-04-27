@@ -1,0 +1,114 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Web Development Page {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/webdev5.jpg" %}" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+        <h1 style="font-family: 'Poppins', sans-serif;">Introduction to Web Development</h1>
+        <div style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <p style="text-indent: 40px;":>Web development is the process of building and maintaining websites and web applications. It involves designing how a website looks, how it functions and how users interact with it. <br> Web development is generally divided into three main areas: </p>
+            <ol>
+                <li>Frontend Development: <br> This focuses on the visual part of a website that users see and interact with. It uses technology like HTML, CSS, and Javascript to create layouts, styling, and interactive features.</li>
+                <div class="row my-3 g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/html2.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">HTML Fundamentals</h5>
+                                <a href="/html_fund" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/css1.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">CSS Basics for Layouts</h5>
+                                <a href="/css_basics" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/java1.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">JavaScript Fundamentals</h5>
+                                <a href="/js_fund" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/boostrap1.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Responsive Web Design (Bootstrap)</h5>
+                                <a href="/bootstrap" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/java5.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Advanced JavaScript (ES6+) / DOM Manipulation</h5>
+                                <a href="/advanced_js" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <li>Backend Development: <br> This handles the server-side logic, databases, and application functionality. Backend development ensures that data is processed, stored, and delivered correctly.</li>
+                <div class="row my-3 g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/react3.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">React.js for Beginners</h5>
+                                <a href="/react" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/django3.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Django Web Development</h5>
+                                <a href="/django" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/node2.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Node.js and Express</h5>
+                                <a href="/node" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <li>Full-Stack Development: <br> This combines frontend and backend development skills to build complete web application. Web development plays a vital role in today's digital world, powering everything from simple blogs to complex platforms like e-commerce sites, learning systems, and social medis networks.<br> By learning web development, you gain the skills to create responsive, interactive, and dynamic websites that solve real-world problems.</li>
+                <div class="row my-3 g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/fullstack2.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Full-stack Web Development Bootcamp</h5>
+                                <a href="/fullstack" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ol>
+        </div>
+    </div>
+
+{% endblock content %}

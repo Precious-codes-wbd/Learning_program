@@ -1,0 +1,176 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 8: Forms and Inputs {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/html1.jpeg" %}" id="Introducing_forms" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Introduction to Forms</h4>
+            <p>Forms allow user input on webpage. Tags used: <code style="color: var(--text-color)">&lt;form&gt;</code></p>
+            <div class="card" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;form action="/submit" method="post"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;!--input go here--&gt;</code> <br>
+                        <code>&lt;/form&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p id="text_inputs">action - URL to send data. <br>method - GET or POST.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Text Inputs</h4>
+            <div class="card" style="max-width: 50rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;form action="/submit" method="post"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;label for="name"&gt;Name: &lt;/label&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;input type="text" id="name" name="name" placeholder="Enter your name"&gt;</code> <br>
+                        <code>&lt;/form&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <form action="/submit" method="post">
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <p>type = "text" - simple text box. <br>placeholder - hint for user. <br><code style="color: var(--text-color)" id="radiobuttons_checkboxes">&lt;label&gt;</code> - connects text to input.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Radio Buttons and Checkboxes</h4>
+            <p>Radio Buttons - select one option: </p>
+            <div class="card" style="max-width: 35rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;form action="/submit" method="post"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;input type="radio" name="gender" value="male"&gt;Male</code> <br>
+                        <code style="margin-left: 20px;">&lt;input type="radio" name="gender" value="female"&gt;Female</code> <br>
+                        <code>&lt;/form&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <form action="/submit" method="post">
+                            <input type="radio" name="gender" value="male">Male
+                            <input type="radio" name="gender" value="female">Female
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <p>Checkboxes - select multiple options: </p>
+            <div class="card" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;form action="/submit" method="post"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;input type="checkbox" name="hobby" value="reading"&gt;Reading</code> <br>
+                        <code style="margin-left: 20px;">&lt;input type="checkbox" name="hobby" value="sports"&gt;Sports</code> <br>
+                        <code style="margin-left: 20px;">&lt;input type="checkbox" name="hobby" value="music"&gt;Music</code> <br>
+                        <code>&lt;/form&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <form action="/submit" method="post">
+                            <input type="checkbox" name="hobby" value="reading">Reading
+                            <input type="checkbox" name="hobby" value="sports">Sports
+                            <input type="checkbox" name="hobby" value="music">Music
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <p id="dropdown_menus">Radio Buttons - Can select only one option. <br> Checkboxes - Can select more than one option.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Dropdown Menus (<code style="color: var(--text-color)">&lt;select&gt;)</code></h4>
+            <div class="card" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;form action="/submit" method="post"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;label for="course"&gt;Course: &lt;/label&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;select id="course" name="course"&gt;</code> <br>
+                        <code style="margin-left: 30px;">&lt;option value="html"&gt;HTML&lt;/option&gt;</code> <br>
+                        <code style="margin-left: 30px;">&lt;option value="css"&gt;CSS&lt;/option&gt;</code> <br>
+                        <code style="margin-left: 30px;">&lt;option value="js"&gt;JavaScript&lt;/option&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/select&gt;</code> <br>
+                        <code>&lt;/form&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <form action="/submit" method="post">
+                            <label for="course">Course: </label>
+                            <select name="course" id="course">
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="js">JavaScript</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <span id="submit_buttons"></span>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Submit Buttons</h4>
+            <div class="card" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;form action="/submit" method="post"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;input type="submit" value="Send&gt;</code> <br>
+                        <code>&lt;/form&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <form action="/submit" method="post">
+                            <input type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                <code style="color: var(--text-color)">&lt;form&gt;</code> - container for user input.<br>
+                Input types: text, radio, checkbox,dropdown,submit. <br>
+                <code style="color: var(--text-color)">&lt;label&gt;</code> - connects text to input. <br>
+                <code style="color: var(--text-color)">&lt;input type="submit"&gt;</code> - send data.
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,160 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 1: Introduction to JavaScript {% endblock title %}
+
+{% block content %}
+    <div>
+        <img src="{% static "images/java3.jpeg" %}" id="JavaScript_definition" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> What is JavaScript?</h4>
+            <p style="text-indent: 30px">JavaScript (JS) is a programming language used to make websites interactive and dynamic.</p>
+            <p>Examples of JS in action: </p>
+            <ul>
+                <li>Clicking a button to show a message.</li>
+                <li>Animating a menu.</li>
+                <li>Validating form inputs.</li>
+                <li>Updating content without reloading the page.</li>
+            </ul>
+            <p>Key Idea: <br>Runs in the browser(client-side). <br>Can also run on the server(Node.js). <br id="adding_js_to_html">Works with HTML and CSS.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Adding JavaScript to HTML</h4>
+            <ol>
+                <li>Inline JavaScript - directly inside an element.
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code>&lt;button </code>
+                                <code class="text-warning-emphasis">onclick="alert('Hello!')"</code>
+                                <code>&gt;Click Me&lt;/button&gt;</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                    <p>How it will appear on your browser:</p>
+                    <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <div class="card-text">
+                                <button onclick="alert('Hello!')">Click Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>Internal JavaScript - inside <code style="color: var(--text-color)">&lt;script&gt;</code> tag.
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code>&lt;!DOCTYPE html&gt;</code> <br>
+                                <code>&lt;html&gt;</code> <br>
+                                <code>&lt;head&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;title&gt;JS Example&lt;/title&gt;</code> <br>
+                                <code>&lt;/head&gt;</code> <br>
+                                <code>&lt;body&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;h1&gt;Welcome&lt;/h1&gt;</code> <br>
+                                <code class="text-warning-emphasis" style="margin-left: 20px;">&lt;script&gt;</code> <br>
+                                <code class="text-warning-emphasis" style="margin-left: 40px;">alert("Hello from internal JS!");</code> <br>
+                                <code class="text-warning-emphasis" style="margin-left: 20px;">&lt;/script&gt;</code> <br>
+                                <code>&lt;/body&gt;</code> <br>
+                                <code>&lt;/html&gt;</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>External JavaScript - seperate .js file linked to HTML. 
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                    <p>External script.js file example: </p>
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-warning-emphasis">console.log("Hello from external JS!");</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                    <p id="writing_your_first_script">Best practice: use external JS for bigger projects. <br>Keeps HTML clean and organized.</p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Writing Your First Script</h4>
+            <ul>
+                <li>Create a file script.js in your project folder.</li>
+                <li>Link to your HTML - write this in your index.html: 
+                    <div class="card mb-3" style="max-width: 27rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code>&lt;head&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;script src="script.js"&gt;&lt;/script&gt;</code> <br>
+                                <code>&lt;/head&gt;</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>Simple JS example: display a message in the browser console.
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-warning-emphasis">console.log("Hello, I am learning Javascript!");</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>Open browser <i class="fa fa-arrow-right" aria-hidden="true"></i> Right click <i class="fa fa-arrow-right" aria-hidden="true"></i> Inspect <i class="fa fa-arrow-right" aria-hidden="true"></i> Console to see the message.</li>
+                <li>Another example: changing content on the page. 
+                    <p>In your index.html: </p>
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code>&lt;p id="example"&gt;Original text&lt;/p&gt;</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                    <p>In your script.js: </p>
+                    <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-warning-emphasis">document.getElementById("example").innerText = "Hello, world!";</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                    <p>How it will appear on your browser: </p>
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <div class="card-text text-start">
+                                <p id="example">Original Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Output: "Original text" changes to "Hello, world!".</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                JavaScript makes websites interactive. <br>
+                Can be added inline, internal, external. <br>
+                Use console.log() to test scripts. <br>
+                Can manipulate page content using JS.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("example").innerText = "Hello, world!";
+    </script>
+
+{% endblock content %}

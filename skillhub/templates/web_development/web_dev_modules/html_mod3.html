@@ -1,0 +1,191 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 3: Text and Headings{% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/html1.jpeg" %}" id="headings" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> HTML Headings (<code style="color: var(--text-color)">&lt;h1&gt;</code> to <code style="color: var(--text-color)">&lt;h6&gt;</code>)</h4>
+            <p style="text-indent: 20px">HTML has six levels of headings:
+                <ol>
+                    <li><code style="color: var(--text-color)">&lt;h1&gt;</code>Biggest heading<code style="color: var(--text-color)">&lt;/h1&gt;</code></li>
+                    <li><code style="color: var(--text-color)">&lt;h2&gt;</code>Second biggest<code style="color: var(--text-color)">&lt;/h2&gt;</code></li>
+                    <li><code style="color: var(--text-color)">&lt;h3&gt;</code>Smaller<code style="color: var(--text-color)">&lt;/h3&gt;</code></li>
+                    <li><code style="color: var(--text-color)">&lt;h4&gt;</code>Smaller<code style="color: var(--text-color)">&lt;/h4&gt;</code></li>
+                    <li><code style="color: var(--text-color)">&lt;h5&gt;</code>Smaller<code style="color: var(--text-color)">&lt;/h5&gt;</code></li>
+                    <li><code style="color: var(--text-color)">&lt;h6&gt;</code>Smallest heading<code style="color: var(--text-color)">&lt;/h6&gt;</code></li>
+                </ol>
+            </p>
+            <p>Example: (Copy this in your file(index.html) in your VS Code)</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <code>&lt;!DOCTYPE html&gt;</code> <br>
+                        <code>&lt;html&gt;</code> <br>
+                        <code>&lt;head&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;title&gt;My Page&lt;/title&gt;</code> <br>
+                        <code>&lt;/head&gt;</code> <br>
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h1&gt;This is heading 1&lt;/h1&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h2&gt;This is heading 2&lt;/h2&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h3&gt;This is heading 3&lt;/h3&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h4&gt;This is heading 4&lt;/h4&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h5&gt;This is heading 5&lt;/h5&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h6&gt;This is heading 6&lt;/h6&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                        <code>&lt;/html&gt;</code> <br>
+                    </div>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <h1>This is heading 1</h1>
+                        <h2>This is heading 2</h2>
+                        <h3>This is heading 3</h3>
+                        <h4>This is heading 4</h4>
+                        <h5>This is heading 5</h5>
+                        <h6>This is heading 6</h6>
+                    </div>
+                </div>
+            </div>
+            <p id="paragraphs"><strong>Key Idea:</strong> <br>Headings help structure your content and are good for SEO.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Paragraphs (<code style="color: var(--text-color)">&lt;p&gt;</code>)</h4>
+            <p style="text-indent: 20px">Paragraphs are blocks of text. Each <code style="color: var(--text-color)">&lt;p&gt;</code> starts on a new line. Browsers add space after paragraphs automatically.</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;!DOCTYPE html&gt;</code> <br>
+                        <code>&lt;html&gt;</code> <br>
+                        <code>&lt;head&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;title&gt;My Page&lt;/title&gt;</code> <br>
+                        <code>&lt;/head&gt;</code> <br>
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;Welcome to my page.&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;My name is Precious.&lt;/p&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                        <code>&lt;/html&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <p>Welcome to my page.</p>
+                        <p id="line_break">My name is Precious.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Line Breaks (<code style="color: var(--text-color)">&lt;br&gt;</code>)</h4>
+            <p style="text-indent: 20px">Use <code style="color: var(--text-color)">&lt;br&gt;</code> to break a line without starting a new paragraph. It is a self-closing tag, no need for <code style="color: var(--text-color)">&lt;/br&gt;</code></p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;!DOCTYPE html&gt;</code> <br>
+                        <code>&lt;html&gt;</code> <br>
+                        <code>&lt;head&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;title&gt;My Page&lt;/title&gt;</code> <br>
+                        <code>&lt;/head&gt;</code> <br>
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;Welcome to my page. &lt;br&gt; My name is Precious.&lt;/p&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                        <code>&lt;/html&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <p id="horizontal_line">Welcome to my page. <br> My name is Precious.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Horizontal Lines (<code style="color: var(--text-color)">&lt;hr&gt;</code>)</h4>
+            <p style="text-indent: 20px">A horizontal line seperates content: </p>
+            <div class="card" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center">
+                        <code>&lt;hr&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <p id="text_formatting">It is self-closing and useful to divide sections.</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Text Formatting (<code style="color: var(--text-color)">&lt;b&gt;</code>, <code style="color: var(--text-color)">&lt;i&gt;</code>, <code style="color: var(--text-color)">&lt;strong&gt;</code>)</h4>
+            <p style="text-indent: 20px"><code style="color: var(--text-color)">&lt;b&gt;</code> - Bold Text</p>
+            <p style="text-indent: 20px"><code style="color: var(--text-color)">&lt;i&gt;</code> - Italics</p>
+            <p style="text-indent: 20px"><code style="color: var(--text-color)">&lt;strong&gt;</code> - Strong Importance</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;!DOCTYPE html&gt;</code> <br>
+                        <code>&lt;html&gt;</code> <br>
+                        <code>&lt;head&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;title&gt;My Page&lt;/title&gt;</code> <br>
+                        <code>&lt;/head&gt;</code> <br>
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;b&gt;This is bold.&lt;/b&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;i&gt;This is italic.&lt;/i&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;strong&gt;This is an important text.&lt;/strong&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                        <code>&lt;/html&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <b>This is bold.</b>
+                        <i>This is italic.</i>
+                        <strong>This is an important text.</strong>
+                    </div>
+                </div>
+            </div>
+            <p><strong>Key Idea:</strong> <br> <code style="color: var(--text-color)">&lt;strong&gt;</code> is better than <code style="color: var(--text-color)">&lt;b&gt;</code> for acccessibility and SEO.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                <code style="color: var(--text-color)">&lt;h1&gt; to &lt;h6&gt;</code> - headings.<br>
+                <code style="color: var(--text-color)">&lt;p&gt;</code> - paragraph. <br>
+                <code style="color: var(--text-color)">&lt;br&gt;</code> - line break. <br>
+                <code style="color: var(--text-color)">&lt;hr&gt;</code> - horizontal line. <br>
+                <code style="color: var(--text-color)">&lt;b&gt;, &lt;i&gt;, &lt;strong&gt;</code> - text formatting. <br>
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}

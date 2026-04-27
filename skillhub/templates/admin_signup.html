@@ -1,0 +1,106 @@
+{% extends "main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Admin Sign Up Page {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+    <center>
+        <div style="width: 140px; height: 140px;">
+            <img src="#" class="p-2 rounded-4 m-2" style="width: 140px; height: 140px; border: 2px solid blue" id="my_image" alt="-----Click browse to select and Upload your profile picture">
+            <input type="file" name="fileToUpload" onchange="select_image()" id="upload_file" accept="images/*">
+        </div>
+    </center>
+    <script>
+        function select_image(){ // this function is for selecting an image from your system folder
+            var file = document.getElementById('upload_file');
+            var my_image = document.getElementById('my_image');
+            my_image.src = URL.createObjectURL(file.files[0]);
+        }
+    </script>
+
+    <div class="row">
+        <div class="col-lg-6 mt-lg-5 my-3 h-75 mb-sm-3">
+            <div class="card border shadow-lg p-3 my-5">
+                <div class="form-group">
+                    <div class="d-flex mt-4">
+                        <label for="Name" class="me-3">Name</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+
+                    <div class="d-flex mt-4">
+                        <label for="Email" class="me-3">Email</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+
+                    <div class="d-flex mt-4">
+                        <label for="Phone" class="me-2">Phone</label>
+                        <input type="tel" name="phone" class="form-control">
+                    </div>
+
+                    <div class="d-flex mt-4">
+                        <label for="dob" class="me-2">Birthday</label>
+                        <input type="date" name="dob" class="form-control">
+                    </div>
+
+                    <div class="d-flex mt-4 mb-3">
+                        <label for="ph" class="me-3">Passport Holder</label>
+                        <input type="radio" name="ph" class="form-control-check" required>
+                        Yes &nbsp;&nbsp; 
+                        <input type="radio" name="ph" class="form-control-check" required>
+                        No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mt-lg-5">
+            <div class="card border shadow-lg p-3 my-5 h-75">
+                <div class="form-group">
+
+                    <div class="d-flex mt-4">
+                        <label for="gender" class="me-3">Gender</label>
+                        <select name="gender" class="form-control" required>
+                            <option hidden selected disabled>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex mt-4">
+                        <label for="location" class="me-3">Location</label>
+                        <select name="location" class="form-control" required id="">
+                            <option hidden selected disabled>Select Location</option>
+                            <option value="Lagos">Lagos</option>
+                            <option value="Abuja">Abuja</option>
+                            <option value="Oyo">Oyo</option>
+                            <option value="Enugu">Enugu</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex mt-4">
+                        <label for="username" class="me-3">Username</label>
+                        <input type="text" name="username" class="form-control" id="">
+                    </div>
+
+                    <div class="d-flex mt-4">
+                        <label for="password" class="me-3">Password</label>
+                        <input type="password" name="password" class="form-control" id="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+    </div>
+
+    </form>
+</div>
+{% endblock content %}

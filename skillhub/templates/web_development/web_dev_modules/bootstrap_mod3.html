@@ -1,0 +1,143 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 3: Bootstrap Components {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/boostrap2.jpeg" %}" alt="Image not found" id="buttons" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Buttons</h4>
+            <p style="text-indent: 30px;">Bootstrap has pre-styled buttons with different colors and sizes.</p>
+            <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;button class="btn btn-danger btn-lg"&gt;Danger Large&lt;/button&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </div>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start" id="navigation_menus">
+                        <div class="container">
+                            <div class="row">
+                                <button class="btn btn-primary">Primary</button>
+                                <button class="btn btn-secondary">Secondary</button>
+                                <button class="btn btn-success">Success</button>
+                                <button class="btn btn-danger btn-lg">Danger Large</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Classes explained: <br> btn - makes it a bootstrap button. <br> btn-primary,btn-secondary - button color/style. <br id="cards"> btn-lg,btn-sm - size.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Cards</h4>
+            <p style="text-indent: 30px;">Cards are used for content containers like profiles, blog posts, products.</p>
+            <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;div class="card" style="width: 18rem;"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;img src="Images/picture.jpeg" class="card-img-top" alt="Image"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;div class="card-body"&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;h5 class="class-title"&gt;Card Title&lt;/h5&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;p class="card-text"&gt;Some example text&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/div&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </div>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start" id="navigation_menus">
+                        <div class="card" style="width:18rem;">
+                          <img src="{% static "images/boostrap2.jpeg" %}" class="card-img-top" alt="Image">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some example text</p>
+                            <a href="#" class="btn btn-primary" id="alerts">Go somewhere</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Alerts</h4>
+            <p style="text-indent: 30px;">Alerts are used to show messages.</p>
+            <div class="card mb-3" style="max-width: 60rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;div class="alert alert-success" role="alert"&gt;Success! Your action was completed.&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;div class="alert alert-danger" role="alert"&gt;Error! Something went wrong.&lt;/div&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </div>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                   <div class="alert alert-success"role="alert">Success! Your action was completed.</div>
+                   <div class="alert alert-danger"role="alert">Error! Something went wrong.</div>
+                </div>
+            </div>
+            <p id="navigation_bars">Common alert classes: alert-primary, alert-warning, alert-info</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Navigation Bars (Navbar)</h4>
+            <p style="text-indent: 30px;">Navbar = Website menu</p>
+            <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;a class="navbar-brand" href="#"&gt;My Site&lt;/a&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;div class="collapse navbar-collapse"&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;ul class="navbar-nav"&gt;</code> <br>
+                        <code style="margin-left: 80px;">&lt;li class="nav-item"&gt;&lt;a class="nav-link href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 80px;">&lt;li class="nav-item"&gt;&lt;a class="nav-link href="#"&gt;About&lt;/a&gt;&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 80px;">&lt;li class="nav-item"&gt;&lt;a class="nav-link href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;/ul&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/nav&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </div>
+                </div>
+            </div>
+            <p>navbar-expand-lg - navbar expands on large screens. <br> bg-light - background color.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Buttons: pre-styled, easy to use. <br>
+                Cards: organize contents like posts or products. <br>
+                Alerts: show messages or notifications. <br>
+                Navbar: create website navigation menus.
+            </p>
+            <p>Bootstrap components make your site interactive and visually appealing.</p>
+        </div>
+
+    </div>
+
+{% endblock content %}

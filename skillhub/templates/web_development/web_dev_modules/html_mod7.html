@@ -1,0 +1,137 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Modules 7: Tables {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/html1.jpeg" %}" id="creating_table" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Creating a Table (<code style="color: var(--text-color)">&lt;table&gt;</code>)</h4>
+            <p>Use <code style="color: var(--text-color)">&lt;table&gt;</code> to organize data in rows and columns.</p>
+            <div class="card" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;table border="1"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;tr&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;th&gt;Name&lt;/th&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;th&gt;Age&lt;/th&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/tr&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;tr&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;td&gt;Precious&lt;/td&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;td&gt;18&lt;/td&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/tr&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;tr&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;td&gt;Teddy&lt;/td&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;td&gt;19&lt;/td&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/tr&gt;</code> <br>
+                        <code>&lt;/table&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <table border="1">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                            </tr>
+                            <tr>
+                                <td>Precious</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>Teddy</td>
+                                <td>19</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <p id="table_rows">
+                <code style="color: var(--text-color)">&lt;table&gt;</code> - starts table. <br>
+                border="1" - adds border. <br>
+                <code style="color: var(--text-color)">&lt;tr&gt;</code> - table row. <br>
+                <code style="color: var(--text-color)">&lt;th&gt;</code> - table header (bold and centered). <br>
+                <code style="color: var(--text-color)">&lt;td&gt;</code> - table data (cells).
+            </p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Table Rows <code style="color: var(--text-color)">&lt;tr&gt;</code></h4>
+            <p style="text-indent" id="table_headings">Each <code style="color: var(--text-color)">&lt;tr&gt;</code> is one row of the table. It can contain <code style="color: var(--text-color)">&lt;th&gt;</code>(headers) or <code style="color: var(--text-color)">&lt;td&gt;</code>(data).</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Table Headings <code style="color: var(--text-color)">&lt;th&gt;</code></h4>
+            <p style="text-indent" id="table_data"><code style="color: var(--text-color)">&lt;th&gt;</code> is for header cells. It is usually bold and centered and it gives meaning to each column.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Table Data <code style="color: var(--text-color)">&lt;td&gt;</code></h4>
+            <p style="text-indent" id="styling_tables"><code style="color: var(--text-color)">&lt;td&gt;</code> is for actual data. It is placed inside <code style="color: var(--text-color)">&lt;th&gt;</code> and can contain text, numbers, or even images.</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Styling and Organizing Tables</code></h4>
+            <p style="text-indent"><code style="color: var(--text-color)">&lt;td&gt;</code> You can use CSS to style: </p>
+            <div class="card" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;table style="border-collapse: collapse; width: 50%;"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;tr&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;th style="background-color: #f2f2f2;"&gt;Name&lt;/th&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;th style="background-color: #f2f2f2;"&gt;Age&lt;/th&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/tr&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;tr&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;td&gt;Precious&lt;/td&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;td&gt;18&lt;/td&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/tr&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <table style="border-collapse: collapse; width: 50%;">
+                            <tr>
+                                <th style="background-color: #f2f2f2;">Name</th>
+                                <th style="background-color: #f2f2f2;">Age</th>
+                            </tr>
+                            <tr>
+                                <td>Precious</td>
+                                <td>18</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <p>
+                border collapse: collapse; - removes double borders. <br>
+                background color - color hearders or rows. <br>
+                Tables can also have padding and alignment using CSS.
+            </p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                <code style="color: var(--text-color)">&lt;table&gt;</code> - container for table.<br>
+                <code style="color: var(--text-color)">&lt;tr&gt;</code> - row. <br>
+                <code style="color: var(--text-color)">&lt;th&gt;</code> - header. <br>
+                <code style="color: var(--text-color)">&lt;td&gt;</code> - data. <br>
+                Style with CSS for better readability.
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

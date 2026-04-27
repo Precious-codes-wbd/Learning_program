@@ -1,0 +1,85 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} UI/UX Design{% endblock title %}
+
+{% block content %}
+
+    <div >
+        <img src="{% static "images/ui1.jpeg" %}" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <h1 style="font-family: 'Poppins', sans-serif;">Introduction to UI/UX Design</h1>
+        <div style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <p style="text-indent: 40px;":>UI (User Interface) and UX (User Experience) design focus on creating digital products that are visually appealing and easy to use. UI design deals with the looks and layout of an application, including colors, typography, button and visual elements. <br> UX focuses on how users interact with a product and how smooth and enjoyable their experience is. Good UI/UX design improves user satisfaction, engagement, and overall product success.</p>
+        </div>
+
+        <div class="row my-3 g-4 mb-5">
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="{% static "images/ui.ux.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Introduction to UI/UX</h5>
+                        <a href="##" class="btn btn-outline-primary">Start Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="{% static "images/ui.ux3.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">User Research Fundamentals</h5>
+                        <a href="##" class="btn btn-outline-primary">Start Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="{% static "images/ui.ux9.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Wireframing and Prototyping</h5>
+                        <a href="##" class="btn btn-outline-primary">Start Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="{% static "images/ui.ux6.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Figma for Beginners</h5>
+                        <a href="##" class="btn btn-outline-primary">Start Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="{% static "images/ui.ux4.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Design Thinking Process</h5>
+                        <a href="##" class="btn btn-outline-primary">Start Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="{% static "images/ux.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">UX Case Study Creation</h5>
+                        <a href="##" class="btn btn-outline-primary">Start Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock content %}

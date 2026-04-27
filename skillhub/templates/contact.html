@@ -1,0 +1,67 @@
+{% extends "main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Contact Us{% endblock title %}
+
+{% block content %}
+
+<div class="mx-5 my-5">
+    <div>
+        <h2 class="fw-bold" style="font-family: 'Poppins', sans-serif;">Connect with SkillHub</h2>
+        <p style="font-family: 'Inter', sans-serif; font-size: 18px;">We'd love to hear from you! <br> Whether you have a question about your courses, need support, or just want to say hello, the SkillHub team is here to help. Send us a message and we'll get back to you as soon as possible.</p>
+    </div>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-group row">
+            <div class="card mt-3 h-100 p-3">
+                <label for="Name" class="mb-2">Name:</label>
+                <input type="name" name="name" class="form-control mb-2" required>
+
+                <label for="Email" class="mb-2">Email:</label>
+                <input type="email" name="email" class="form-control mb-2" required>
+                
+                <label for="Subject" class="mb-2">Subject:</label>
+                <input type="text" name="subject" class="form-control mb-2" required>
+
+                <label for="message" class="mb-2">Your Message:</label>
+                <input type="text" name="text_message" class="form-control mb-2" required>
+                
+                <center>
+                    <a href="##" type="submit" class="btn btn-outline-primary mt-2">Send Message</a>
+                </center>
+            </div>  
+        </div>
+    </form>
+
+    <div class="row my-4">
+        <div class="col-lg-4 col-md-4 col-12 mb-3">
+            <div class="card border p-3 shadow-sm h-100">
+                <p>Looking for quick answers? <br> Visit our <strong>Help Center</strong> or check out our <strong>Frequently Asked Questions (FAQs)</strong> for instant support.</p>
+                <a href="##" type="submit" class="btn btn-outline-primary mt-2 ">Visit Help</a>
+                <a href="##" type="submit" class="btn btn-outline-primary mt-2 ">Visit FAQs</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mb-3">
+            <div class="card border p-3 shadow-sm h-100">
+                <p style="font-size: 18px;">Stay connected and follow us on social media:</p>
+                <a href="http://instragram.com" class="mb-2 border-black text-dark">Click to visit our Instagram Page</a>
+                <a href="http://instragram.com" class="mb-2 border-black text-dark">Click to visit our Facebook Page</a>
+                <a href="http://instragram.com" class="mb-2 border-black none text-dark">Click to visit our Twitter (X) Page</a>
+                <a href="http://instragram.com" class="mb-2 border-black text-dark">Click to visit our LinkedIn Page</a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mb-3">
+            <div class="card border p-3 shadow-sm h-100 text-center">
+                <p>Email: <a class="text-decoration-none text-dark" href="mailto:">Diana@skillHub.com</a></p>
+                <p>Phone: <a class="text-decoration-none text-dark" href="tel:+2347012215549">+234 701 221 5549</a></p>
+                <P>Location: Lagos, Nigeria.</P>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

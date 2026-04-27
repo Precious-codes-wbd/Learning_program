@@ -1,0 +1,50 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 10: Final Project {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/html1.jpeg" %}" id="plan_webpage" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Planning Your Webpage</h4>
+            <p style="text-indent: 30px" id="create_webpage">Decide what content you want. Draw a rough layout on paper or Figma List pages and sections.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Creating a Personal Webpage</h4>
+            <p style="text-indent: 30px" id="add_images_links">Create index.html as homepage. Use semantic HTML for structure. Add headings, paragraphs and lists.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Adding Images and Links</h4>
+            <p style="text-indent: 30px" id="organizing_content">Include profile image, banners. Add links to social media or other pages. Make sure links work.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Organizing Content</h4>
+            <p style="text-indent: 30px" id="publish_page">Use headers, articles, sections and footers. Create navigation menus for easy access. Use lists and tables for structured info.</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Publishing Your Page</h4>
+            <p style="text-indent: 30px">Open your HTML file in browser. Check for errors or broken links.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Planning <i class="fa fa-arrow-right" aria-hidden="true"></i> structure <i class="fa fa-arrow-right" aria-hidden="true"></i> content <i class="fa fa-arrow-right" aria-hidden="true"></i> styling <i class="fa fa-arrow-right" aria-hidden="true"></i> publish <br>
+                Combine all modules in one functional webpage. <br>
+                This is your first complete project.
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

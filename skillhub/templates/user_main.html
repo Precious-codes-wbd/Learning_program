@@ -1,0 +1,102 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    
+     <!-- jQuery importing your offline cdn files from static folder using django template engine -->
+        <script src="{% static 'cdn/jquery-3.1.1.min.js' %}" type='text/javascript'></script>
+        <script src="{% static 'cdn/jquery-ui.min.js' %}" type='text/javascript'></script>
+        <link  href="{% static 'cdn/jquery-ui.min.css' %}" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="{% static "css/skillHub.css" %}">
+
+     <!-- bootstrap -->
+        <script src="{% static 'cdn/popper.min.js' %}"></script>
+        <link rel="stylesheet" href="{% static "cdn/fontawesome-free-7.1.0-web/fontawesome-free-7.1.0-web/css/all.min.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "cdn/bootstrap-5.3.8-dist/css/bootstrap.min.css" %}">
+        <script src="{% static "cdn/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" %}"></script>
+        <link rel="stylesheet" href="{% static "aos/aos.css" %}">
+        <script src="{% static "aos/aos.js" %}"></script>
+</head>
+<body style="background-color: var(--background-color); color: var(--text-color);">
+
+    <div>
+        <nav class="navbar navbar-dark fixed-top w-100" style="background-color: var(--primary-color);">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <div class="left d-flex">
+                    <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">skillHub</a>
+                </div>
+                <div class="right d-none d-lg-flex align-items-center me-2">
+                    <form class="d-flex" role="search">
+                        <a href="/user_dashboard" class="btn btn-primary rounded-circle p-2 me-2">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </a>
+                        <input class="form-control me-2" type="search" placeholder="Search courses...." aria-label="Search">
+                        <button class="btn btn-dark me-2" type="submit">Search</button>
+                        <button class="toggle-button btn btn-outline-dark" id="theme-switch">
+                            <span>🌙</span>
+                            <span>☀️</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="width: 250px; background-color: var(--background-color)">
+                    <div class="offcanvas-header text-dark">
+                        <h4 class="offcanvas-title text-primary" id="offcanvasDarkNavbarLabel">skillHub</h4>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="nav-item">
+                            <img class="mb-2" src="{{ user.signup.passport.url }}" style="height: 160px; width: 170px; object-fit: cover; margin-left: 15px; border-radius: 150px; border: 2px solid black;" alt="No Image Found">
+                            <a type="submit" href="/edit_profile/{{user.signup.user_id}}" class="btn btn-outline-primary ps-3 pe-3 mt-3" style="margin-left: 35px;">Edit Profile</a>
+                        </div>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 mt-2">
+                            <li class="nav-item border-bottom border-dark">
+                                <a class="nav-link active ms-1 mb-2" aria-current="page" style="color: var(--text-color)" href="/user_dashboard">Home</a>
+                            </li>
+                            <li class="nav-item border-bottom border-dark">
+                                <a class="nav-link ms-1 mb-2" style="color: var(--text-color)" href="/courses">Courses</a>
+                            </li>
+                            <li class="nav-item border-bottom border-dark">
+                                <a class="nav-link ms-1 mt-2 mb-2" style="color: var(--text-color)" href="/instructors">Instructors</a>
+                            </li>
+                            <li class="nav-item border-bottom border-dark">
+                                <a class="nav-link ms-1 mt-2 mb-2" style="color: var(--text-color)" href="##">Payment</a>
+                            </li>
+                            <a type="submit" href="/logout" class="btn btn-primary ms-1 mt-4" style="margin-left: 35px;">Log out</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        {% block content %}
+
+        {% endblock content %}
+        
+        {% for message in messages %}
+            <input type="hidden" id="get_message" value="{{message}}">
+            <script>
+                var get_message = document.getElementById('get_message').value;
+                alert(get_message);
+            </script>
+        {% endfor %}
+        
+        <footer class="text-white px-5 py-4 text-center mt-5" style="font-size: 15px; background-color: var(--primary-color);">
+            <p style="font-size: 14px;">SkillHub is your one best platform to learn tech and creative skills easily and practically.</p>
+            <div class="mb-3">
+                <a href="##" class="text-decoration-none text-white"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="##" class="text-decoration-none text-white"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="##" class="text-decoration-none text-white"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="##" class="text-decoration-none text-white"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            </div>
+            <p>© 2026 SkillHub. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+<script src="{% static "js/skillhub.js" %}"></script>
+</html>

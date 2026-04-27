@@ -1,0 +1,130 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Moduls 6: Lists {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/html1.jpeg" %}" id="ordered_list" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Ordered Lists <code style="color: var(--text-color)">&lt;ol&gt;</code></h4>
+            <p>Ordered lists are numbered lists.</p>
+            <div class="card" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;ol&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;li&gt;Wake Up&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;li&gt;Brush teeth&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;li&gt;Have breakfast&lt;/li&gt;</code> <br>
+                        <code>&lt;ol&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <ol>
+                            <li>Wake up</li>
+                            <li>Brush teeth</li>
+                            <li>Have breakfast</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <p id="unordered_list"><code style="color: var(--text-color)">&lt;ol&gt;</code> - ordered list. <br> <code style="color: var(--text-color)">&lt;li&gt;</code> - list them.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Unordered Lists <code style="color: var(--text-color)">&lt;ul&gt;</code></h4>
+            <p>Unordered list use bullet: </p>
+            <div class="card" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;ul&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;li&gt;Apples&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;li&gt;Bananas&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;li&gt;Oranges&lt;/li&gt;</code> <br>
+                        <code>&lt;/ul&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <ul>
+                            <li>Apples</li>
+                            <li>Bananas</li>
+                            <li>Oranges</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p id="nested_list"><code style="color: var(--text-color)">&lt;ul&gt;</code> - unordered list. <br> <code style="color: var(--text-color)">&lt;li&gt;</code> - list them.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Nested Lists</h4>
+            <p>You can put a list inside another list.</p>
+            <div class="card" style="max-width: 25rem; margin: 20px 60px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;ol&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;li&gt;Fruits</code> <br>
+                        <code style="margin-left: 40px;">&lt;ul&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;li&gt;Apples&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;li&gt;Bananas&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;li&gt;Oranges&lt;/li&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;ul&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;li&gt;Vegetables&lt;/li&gt;</code> <br>
+                        <code>&lt;ol&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card" style="max-width: 20rem; margin: 20px 60px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text text-start">
+                        <ol>
+                            <li>Fruits
+                                <ul>
+                                    <li>Apples</li>
+                                    <li>Bananas</li>
+                                    <li>Oranges</li>
+                                </ul>
+                            </li>
+                            <li>Vegetables</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <p id="real_life_example">Nested lists are good for subcategories.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Real-Life Examples of Lists</h4>
+            <p>Shopping list - <code style="color: var(--text-color)">&lt;ul&gt;</code></p>
+            <p>Instructions/Steps - <code style="color: var(--text-color)">&lt;ol&gt;</code></p>
+            <p>Menus - <code style="color: var(--text-color)">&lt;ul&gt;</code></p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                <code style="color: var(--text-color)">&lt;ol&gt;</code> - numbered list.<br>
+                <code style="color: var(--text-color)">&lt;ul&gt;</code> - bulleted list. <br>
+                <code style="color: var(--text-color)">&lt;li&gt;</code> - list item. <br>
+                Lists can be nested. <br>
+                Use lists for organization and readability.
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

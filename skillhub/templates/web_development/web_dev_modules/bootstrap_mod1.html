@@ -1,0 +1,165 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 1: Introduction to Bootstrap{% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/boostrap2.jpeg" %}" alt="Image not found" id="bootstrap_definition" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> What is Boostrap?</h4>
+            <p style="text-indent: 30px;">Bootstrap is a CSS framework that helps you create responsive websites faster. Features include:</p>
+            <ol>
+                <li>Grid systems for layouts.</li>
+                <li>Pre-designed components (buttons, cards, forms).</li>
+                <li>Utilities for spacing, colors and visibility.</li>
+            </ol>
+            <p>Advantages: </p>
+            <ol>
+                <li>Saves time - no need to write all CSS from scratch.</li>
+                <li>Mobile-friendly - automatically adjusts for phones, tablets, desktop.</li>
+                <li id="adding_bootstrap_to_a_project">Consistent design across browsers.</li>
+            </ol>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Adding Bootstrap to a Project</h4>
+            <p>There are two main ways to include Boostrap: </p>
+            <ul>
+                <li>CDN (Content Delivery Network) - fastest way, no files included but you need to be online.
+                    <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <div class="card-text text-start">
+                                <code>&lt;!DOCTYPE html&gt;</code> <br>
+                                <code>&lt;html&gt;</code> <br>
+                                <code>&lt;head&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;title&gt;Boostrap Example&lt;/title&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;!-- Boostrap CSS --&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" &gt;</code> <br>
+                                <code>&lt;/head&gt;</code> <br>
+                                <code>&lt;body&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;h1 class="text-primary"&gt;Hello, Bootstrap!&lt;/h1&gt;</code> <br>
+                                <code>&lt;/body&gt;</code> <br>
+                                <code>&lt;/html&gt;</code> <br>
+                            </div>
+                        </div>
+                    </div>
+                    <p>How it will appear on your browser:</p>
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <div class="card-text text-start" id="navigation_menus">
+                                <h1 class="text-primary">Hello, Bootstrap!</h1>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>Download Boostrap - include the files locally.
+                    <ul>
+                        <li>Download from <a target="_blank" href="https://getbootstrap.com">getbootstrap.com</a></li>
+                        <li>Link the CSS and JS files in your HTML. </li>
+                        <li>After downloading the file, go to file explorer and right click on the file, then click extract all.</li>
+                        <li> Write this in your index.html
+                            <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                                <div class="card-body col-md-12">
+                                    <div class="card-text text-start">
+                                        <code>&lt;!DOCTYPE html&gt;</code> <br>
+                                        <code>&lt;html&gt;</code> <br>
+                                        <code>&lt;head&gt;</code> <br>
+                                        <code style="margin-left: 20px;">&lt;title&gt;Boostrap Example&lt;/title&gt;</code> <br>
+                                        <code style="margin-left: 20px;">&lt;!-- Boostrap CSS --&gt;</code> <br>
+                                        <code style="margin-left: 20px;">&lt;link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet" &gt;</code> <br>
+                                        <code>&lt;/head&gt;</code> <br>
+                                        <code>&lt;body&gt;</code> <br>
+                                        <code>&lt;/body&gt;</code> <br>
+                                        <code style="margin-left: 20px;">&lt;script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js" rel="stylesheet" &gt;</code> <br>
+                                        <code>&lt;/html&gt;</code> <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="bootstrap_containers">You can use Boostrap offline.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Bootstrap Containers</h4>
+            <p>Containers are the main layout wrapper in Bootstrap.</p>
+            <p>There are two types: </p>
+            <ul>
+                <li>.container - fixed width, responsive
+                    <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <div class="card-text text-start">
+                                <code>&lt;body&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;div class="container"&gt;</code> <br>
+                                <code style="margin-left: 40px;">&lt;h2&gt;Fixed Container&lt;/h2&gt;</code> <br>
+                                <code style="margin-left: 40px;">&lt;p&gt;This content is centered and responsive!&lt;/p&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;/div&gt;</code> <br>
+                                <code>&lt;/body&gt;</code> <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>How it will appear on your browser:</p>
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <div class="card-text text-start" id="navigation_menus">
+                                <div class="container">
+                                    <h2>Fixed Container</h2>
+                                    <p>This content is centered and responsive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>.container-fluid - full width, stretches
+                    <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <div class="card-text text-start">
+                                <code>&lt;body&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;div class="container-fluid"&gt;</code> <br>
+                                <code style="margin-left: 40px;">&lt;h2&gt;Fixed Width Container&lt;/h2&gt;</code> <br>
+                                <code style="margin-left: 40px;">&lt;p&gt;This content stretches the full width on the screen.&lt;/p&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;/div&gt;</code> <br>
+                                <code>&lt;/body&gt;</code> <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>How it will appear on your browser:</p>
+                    <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <div class="card-text text-start" id="navigation_menus">
+                                <div class="container-fluid">
+                                    <h2>Fixed Container</h2>
+                                    <p>This content stretches the full width on the screen.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <p>Containers keep content aligned and responsive.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Bootstrap - CSS framework for fast, responsive websites. <br>
+                Can be aded via CDN or local download. <br>
+                Conatiners organize your layout (.container, .container-fluid) <br>
+                Makes websites mobile-friendly and consistent.
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}

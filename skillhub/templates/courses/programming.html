@@ -1,0 +1,87 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Programming Basics {% endblock title %}
+
+{% block content %}
+
+    <div >
+        <img src="{% static "images/pbasics1.jpeg" %}" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <h1 style="font-family: 'Poppins', sans-serif;">Introduction to Programming</h1>
+
+        <div style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <p style="text-indent: 40px;">Programming is the process of writing instructions that tell a computer what to do. These instructions are written in programming languages such as Python, JavaScript, Java, or C++. <br> Programming basics include variables, data types, loops, conditionals, and functions. These concepts form the foundation for building software, websites, and applications. Learning programming improves problem-solving skills and logical thinking, which is essential in tech industry.</p>
+
+            <div class="row my-3 g-4 mb-5">
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static "images/p.b8.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Introduction to Programming</h5>
+                            <a href="##" class="btn btn-outline-primary">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static "images/p.b7.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Python for Absolute Beginners</h5>
+                            <a href="##" class="btn btn-outline-primary">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static "images/p.b3.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Java Programming Basics</h5>
+                            <a href="##" class="btn btn-outline-primary">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static "images/p.b2.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">C++ Fundamentals</h5>
+                            <a href="##" class="btn btn-outline-primary">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static "images/p.b4.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Problems Solving and Algorithms</h5>
+                            <a href="##" class="btn btn-outline-primary">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static "images/p.b11.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Object-Oriented Programming (OOP)</h5>
+                            <a href="##" class="btn btn-outline-primary">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}

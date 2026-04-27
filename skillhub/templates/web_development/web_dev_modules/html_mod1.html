@@ -1,0 +1,125 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 1: Introduction to HTML {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/html1.jpeg" %}" id="html_definition" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> What is HTML?</h4>
+            <p style="text-indent: 40px;">HTML (HyperText Markup Language) is the standard language used to create webpages. It structures content on the web. It tells the browser what to display.</p>
+            <p>Example: <br> <code style="color: var(--text-color)">&lt;h1&gt;Hello World&lt;/h1&gt;</code> <br> <code style="color: var(--text-color)">&lt;p&gt;This is a webpage&lt;/p&gt;</code></p>
+            <p id="how_website_works"><b>Key Idea: </b><br> HTML is not a programming language _ it is a markup language.</p>
+        </div>
+
+        <div class="lesson2"  style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> How Websites Work</h4>
+            <span>A website works using three main parts:
+                <ol>
+                    <li>Client (Browser) <i class="fa fa-arrow-right" aria-hidden="true"></i> what users use (Chrome, Safari).</li>
+                    <li>Server <i class="fa fa-arrow-right" aria-hidden="true"></i>  where the website files are stored.</li>
+                    <li>Internet <i class="fa fa-arrow-right" aria-hidden="true"></i> connects them.</li>
+                </ol>
+            </span>
+            <p id="web_browsers">Process: <br> You type a website name, browser sends request to server, server sends back HTML,CSS, JS, Browser displays it.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Web Browsers and Servers</h4>
+            <div>
+                <h5 style="font-family: 'Poppins', sans-serif;"><i class="fa fa-globe" aria-hidden="true"></i> Web Browser</h5>
+                <p style="text-indent: 40px;">A browser is software used to view websites.</p>
+                <span>Examples: 
+                    <ul>
+                        <li>Chrome</li>
+                        <li>Firefox</li>
+                        <li>Edge</li>
+                    </ul>
+                </span>
+            </div>
+            <div>
+                <h5 style="font-family: 'Poppins', sans-serif;"><i class="fa fa-laptop" aria-hidden="true"></i> Web Server</h5>
+                <p style="text-indent: 40px;">A server is a computer that stores website files and sends them when requested.</p>
+            </div>
+            <p id="installation"><strong>Key Idea: </strong> <br>Browser = displays <br>Server = stores and sends</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4: </strong>Installing a Code Editor (VS Code)</h4>
+            <p style="text-indent: 40px;">A code editor is where you write your HTML code.</p>
+            <p>Popular editor: VS Code (Visual Studio Code)</p>
+            <span>Steps: 
+                <ul>
+                    <li>Download VS Code</li>
+                    <li>Install it</li>
+                    <li>Open it</li>
+                    <li>Create a new file</li>
+                </ul>
+            </span>
+            <p id="creating_first_htmlfile">Useful feature: Syntax highlighting (makes code colorful and readable).</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Creating Your First HTML File</h4>
+            <p>Steps:
+                <ol>
+                    <li>Open VS Code</li>
+                    <li>Create a new file</li>
+                    <li>Save it as: *index.html*</li>
+                    <li>Write this: </li>
+                    <center>
+                        <div class="card" style="max-width: 40rem;">
+                            <div class="card-body col-md-7">
+                                <p class="card-text text-start">
+                                    <code>&lt;!DOCTYPE html&gt;</code> <br>
+                                    <code>&lt;html&gt;</code> <br>
+                                    <code>&lt;head&gt;</code> <br>
+                                    <code style="margin-left: 20px;">&lt;title&gt;My First Page&lt;/title&gt;</code> <br>
+                                    <code>&lt;/head&gt;</code> <br>
+                                    <code>&lt;body&gt;</code> <br>
+                                    <code style="margin-left: 20px;">&lt;h1&gt;Hello World!&lt;/h1&gt;</code> <br>
+                                    <code style="margin-left: 20px;">&lt;p&gt;This is my first webpage&lt;/p&gt;</code> <br>
+                                    <code>&lt;/body&gt;</code> <br>
+                                    <code>&lt;/html&gt;</code> <br>
+                                </p>
+                            </div>
+                        </div>
+                    </center>
+                    <li>Open it in your browser</li>  
+                </ol>
+            </p>
+            <p><strong>Key Idea:</strong> <br>.html extention is important (index.html). <br>HTML files are openeed in your browser. <br>Always save your file before opening.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>HTML is used to structure webpages. <br>Websites work using browser + server. <br> Your write code in a code editor. <br> Your first file must end with .html</p>
+        </div>
+
+        <div class="step" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 40px;">
+            <h3 style="font-family: 'Poppins', sans-serif;">Steps to Creating a proper file: </h3>
+            <ol>
+                <li>Open File Explorer</li>
+                <li>Go to documents, create a folder, you can name it 'Project' or any name of your choice.</li>
+                <li>Open VS Code.</li>
+                <li>Click open folder.</li>
+                <li>Then go to documents and select the folder you created ('Project').</li>
+                <li>After selecting, click on the file icon, then you will see a another file icon with a '+' sign underneath it, Click it and create a file.</li>
+                <li>Reminder: Your first file must be index.html so name your file index.html.</li>
+                <li>Shortcut: Shift 1 + Enter key or you can copy the code under Lesson 5.</li>
+                <li>If you want to view your site on the browser, you have to download this extension 'Live Server'.</li>
+                <li>In your VS Code, at the right side where there is the file icon you will see another icon with the name 'Extension', Click it and download 'Live Server'.</li>
+                <li>Then in your index.html, right click on the page and click on 'Open with Live Server'.</li>
+            </ol>
+        </div>
+
+    </div>
+    
+
+{% endblock content %}

@@ -1,0 +1,67 @@
+{% extends "main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Login Page {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row my-5">
+
+        <div class="col-lg-2">
+            {% comment %} empty {% endcomment %}
+        </div>
+
+        <div class="col-lg-8">
+
+            <div class="card border-1" style="max-width:50rem; background-color: rgb(255, 255, 255); border-radius: 20px; box-shadow: 4px 30px 15px rgba(0, 0, 0, 0.1)">
+                <div class="card-body">
+                    <h2 class="fw-bold text-center my-5" style="font-family: 'Poppins', sans-serif; color: rgb(2, 11, 40);">Login to continue to your account</h2>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            {% comment %} empty {% endcomment %}
+                        </div>
+
+                        <div class="col-sm-4">
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <div class="mt-4">
+                                    <i class="fa fa-user text-secondary" style="position: absolute; padding: 12px; "></i>
+                                    <input type="text" name="username" class="form-control" placeholder="Username" style="text-indent: 30px;" required>
+                                </div>
+
+                                <br>
+
+                                <div class="mt-3">
+                                    <i class="fa fa-lock text-secondary" style="position: absolute; padding: 12px;" aria-hidden="true"></i>
+                                    <input type="password" name="password" class="form-control" placeholder="Password" style="text-indent: 30px;" required>
+                                </div>
+
+                                <center class="mb-5 mt-5 pb-4">
+                                    <button class="btn btn-outline-primary me-3" type="submit">Login</button>
+                                    <a href="/reset_password" class="text-info w-100"><span class="pull-right">Forgot password</span></a>
+                                </center>
+                            </form>
+                        </div>
+
+                        <div class="col-sm-4">
+                            {% comment %} empty {% endcomment %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-2">
+            {% comment %} empty {% endcomment %}
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}

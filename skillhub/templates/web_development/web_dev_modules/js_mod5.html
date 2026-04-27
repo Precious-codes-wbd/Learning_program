@@ -1,0 +1,79 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 5: Loops {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java3.jpeg" %}" id="for_loops" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> For Loops</h4>
+            <p>for loop run a block of code a fixed number of times.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let(i = 1,i <= 5, i++ ){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("Hello", i);</code> <br>
+                        <code class="text-warning-emphasis">};</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Explanation: <br>
+            let i = 1 - start counting from 1 <br>
+            i <= 5 - loop runs while i is <= 5 <br>
+            i++ - increase i by 1 after each loop <br id="while_loops">
+            Output: Hello 1, Hello 2, Hello 3....Hello 5
+            </p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> While Loop</h4>
+            <p>while loops run as long as a condition is true.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let i = 1;</code> <br>
+                        <code class="text-warning-emphasis">while(i <= 5){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("Hi", i);</code> <br>
+                        <code class="text-warning-emphasis">i++;</code> <br>
+                        <code class="text-warning-emphasis">};</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="do_while_loops">Be careful with while loops to avoid infinite loops.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Do-While Loop</h4>
+            <p>do-while loops run at least once, then check the condition.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let i = 1;</code> <br>
+                        <code class="text-warning-emphasis">do{</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px;">console.log("Hey", i);</code> <br>
+                        <code class="text-warning-emphasis">} while(i <= 5);</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>If the condition is false at first, the code runs once.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                for loop: repeat code a fixed number of times. <br>
+                while loop: repeat code while condition is true. <br>
+                do-while loop: runs at least once, then checks condition. <br>
+                Loops helps automate repetitive tasks.
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

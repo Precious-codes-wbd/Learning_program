@@ -1,0 +1,204 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 7: CSS Grid {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/css2.jpeg" %}" id="grid_introduction" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Introduction to CSS Grid</h4>
+            <p style="text-indent: 30px">CSS Grid is a 2-dimensional layout system. You can control both rows and columns at the same time. Works on a parent container (grid container) and its children (grid items).</p>
+            <p>Why use Grid? </p>
+            <ul>
+                <li>Perfect for complex layout.</li>
+                <li>Combine rows and columns easily.</li>
+                <li id="grid_container">Align items in both directions.</li>
+            </ul>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Grid Container</h4>
+            <p>To use CSS Grid, set the parent element as a grid container: </p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div class="container"&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div&gt;Item 1&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div&gt;Item 2&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div&gt;Item 3&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div&gt;Item 4&lt;/div&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.container{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">display: grid;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>All direct children of .container become grid items.</p>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="display: grid">
+                        <div>Item 1</div>
+                        <div>Item 2</div>
+                        <div>Item 3</div>
+                        <div id="grid_rows_columns">Item 4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Grid Rows and Columns</h4>
+            <p>Use grid-template-columns and grid-template-rows to define number and size of columns/rows.</p>
+            <p>In your index.html: </p>
+             <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div class="container"&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div style="background-color: red"&gt;Item 1&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div style="background-color: green"&gt;Item 2&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div style="background-color: blue"&gt;Item 3&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div style="background-color: yellow"&gt;Item 4&lt;/div&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 35rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.container{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">display: grid;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">grid-template-columns: 100px 200px 100px; /* 3 columns */</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">grid-template-rows: 50px 100px; /* 2 rows */</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="display: grid; grid-template-columns:70px 120px 70px; grid-template-rows: 50px 100px;">
+                        <div style="background-color: red">Item 1</div>
+                        <div style="background-color: green">Item 2</div>
+                        <div style="background-color: blue">Item 3</div>
+                        <div style="background-color: yellow">Item 4</div>
+                    </div>
+                </div>
+            </div>
+            <p>We have two rows and three columns <br> The first row is 50px and the second is 100px that is why item 4 box is longer than item 1. <br> We have three columns, the first one is 100px, the second 200px and the third one 100px. Item 2 is longer than Item 1 and Item 3 because it is the one taking the highest pixels: 200px.</p>
+            <p>You can use fractions (fr): </p>
+            <div class="card mb-3" style="max-width: 45rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.container{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">grid-template-columns: 1fr 2fr 1fr; /* second column is twice as wide */</code> <br>
+                        <code class="text-primary-emphasis" id="grid_gaps">} </code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Grid Gaps</h4>
+            <p>gap (or row-gap & column-gap) controls spacing between grid items.</p>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 35rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.container{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">display: grid;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">grid-template-columns: repeat(3, 1fr);</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">gap: 10px;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="display: grid; grid-template-columns:repeat(3, 1fr); gap: 10px;">
+                        <div style="background-color: red">Item 1</div>
+                        <div style="background-color: green">Item 2</div>
+                        <div style="background-color: blue">Item 3</div>
+                        <div style="background-color: yellow">Item 4</div>
+                    </div>
+                </div>
+            </div>
+            <p id="building_layouts_with_grid">Makes spacing easier than using margins.</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Building Layouts with Grid</h4>
+            <p>You can position items in specific rows/columns.</p>
+            <p>In your index.html: </p>
+             <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div class="container"&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div class="Item1"&gt;Item 1&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div class="Item2"&gt;Item 2&lt;/div&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 35rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.container{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">display: grid;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                        <code class="text-primary-emphasis">.Item1{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">grid-column: 1 / 3; /* spans from column 1 to 2 */</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">grid-row: 1 / 2; /* first row */</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                        <code class="text-primary-emphasis">.Item2{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">grid-column: 3 / 4;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">grid-row: 1 / 3; /* spans 2 rows */</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="display: grid;">
+                        <div style="background-color: red; grid-column: 1 / 3; grid: row: 1 / 2;">Item 1</div>
+                        <div style="background-color: green; grid-column: 3 / 4; grid-row: 1 /3;">Item 2</div>
+                    </div>
+                </div>
+            </div>
+            <p>Combine with Flexbox inside grid items for advanced layouts.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                CSS Grid = 2D layout system. <br>
+                Grid container: display: grid; <br>
+                Grid rows/columns: grid-template-rows, grid-template-columns. <br>
+                Gaps: spacing between items. <br>
+                Item placement: control position with grid-row and grid-column. <br>
+                Grid + Flexbox = Very powerful layout tools.
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

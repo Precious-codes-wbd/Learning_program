@@ -1,0 +1,186 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 5: Layout Basics {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/css2.jpeg" %}" id="display_property" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Display Property</h4>
+            <p style="text-indent: 30px">Controls how an element is displayed on a page.</p>
+            <p>Common values: </p>
+            <ul>
+                <li>block - element takes full width, starts on a new line.
+                    <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-primary-emphasis">div{ </code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;">display: block;</code> <br>
+                                <code class="text-primary-emphasis">} </code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>inline - element flows with text, does not start on a new line.
+                    <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-primary-emphasis">div{ </code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;">display: inline;</code> <br>
+                                <code class="text-primary-emphasis">} </code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    inline-block - inline element but can have width and height.
+                    <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-primary-emphasis">div{ </code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;">display: inline-block;</code> <br>
+                                <code class="text-primary-emphasis">} </code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    none - element is hidden completely.
+                    <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-primary-emphasis">div{ </code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;" id="blockvsinline_element">display: none;</code> <br>
+                                <code class="text-primary-emphasis">} </code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong>  Block vs Inline Element</h4>
+            <p>
+                Block elements -  <code style="color: var(--text-color)">&lt;div&gt;</code>, <code style="color: var(--text-color)">&lt;h1&gt;</code>, <code style="color: var(--text-color)">&lt;p&gt;</code>, <code style="color: var(--text-color)">&lt;section&gt;</code> <br>
+                Starts on a new line. Can have width & height.
+            </p>
+            <p>
+                Inline elements - <code style="color: var(--text-color)">&lt;span&gt;</code>, <code style="color: var(--text-color)">&lt;a&gt;</code>, <code style="color: var(--text-color)">&lt;strong&gt;</code> <br>
+                Flow with text. Width and height cannot be set.
+            </p>
+            <p id="position_property">Inline-block - hybrid; behaves like inline but supports width and height.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Position Property</h4>
+            <p style="text-indent: 30px">Controls where an element is placed static(default) - normal flow of page.</p>
+            <p>Relative - positioned relative to its normal position.</p>
+            <p>Absolute - positioned relative to nearest positioned ancestor.</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div&gt;</code>
+                        <code>&lt;/div&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">div{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">background-color: purple;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">width: 200px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">height: 150px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">position: relative;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">top: 10px; /* moves down */</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">left: 30px; /* moves right */</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                        <code class="text-primary-emphasis">div{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">background-color: blue;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">width: 200px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">height: 150px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">position: absolute;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">top: 50px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">left: 70px;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 22rem; height: 15rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="background-color: purple; width: 200px; height: 150px; position: relative; top: 10px; left: 30px;">
+                        <div style="position: absolute; background-color: blue; width: 200px; height: 150px; top: 50px; left: 70px;"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Fixed - stays in the same place even when scrolling.</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">header{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">position: fixed;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">top: 0;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">width: 100%;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="overflow">Sticky - scrolls until a point, then sticks.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Overflow</h4>
+            <p style="text-indent: 30px">Controls what happens when content overflows its container.</p>
+            <p>Values: <br> visible - default, content spills out. <br> hidden - content cut off. <br> scroll - scrollbars added. <br> auto - scrollbars added only if needed.</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">div{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">width: 200px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">height: 100px;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;" id="visibility">overflow: scroll;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Visibility</h4>
+            <p style="text-indent: 30px">Controls whether element is visible or invisible. <br> visible - element is seen. <br> invisible - element invisible but still takes space.</p>
+            <div class="card mb-3" style="max-width: 33rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">p{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">visibility: hidden; /* hidden but space remains */</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Display - block, inline, inline-block, none. <br>
+                Position - static, relative, absolute, fixed, sticky. <br>
+                Overflow - visible, hidden, scroll, auto. <br>
+                Visibility - visible, hidden. <br>
+                Understanding these controls how elements appear and behave on a page.
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

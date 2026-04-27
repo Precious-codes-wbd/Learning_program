@@ -1,0 +1,98 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Graphic Design {% endblock title %}
+
+{% block content %}
+
+    <div >
+        <img src="{% static "images/graphic1.png" %}" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+        
+        <h1 style="font-family: 'Poppins', sans-serif;">Introduction to Graphic Design</h1>
+
+        <div style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <p style="text-indent: 40px;">Graphic design is the art of creating visual content to communicate ideas and messages. It combines creativity, typography, color theory, images and layout techniques to produce visually appealing designs.<br> Graphic designers create logos, posters, social media graphics, advertisements, brand identities, and digital content. Tools commonly used include Adobe Photoshop, Illustrator, Canva, and Figma. Graphic design plays an important role in branding, marketing, and user engagement by making information visually attractive and easy to understand.</p>
+
+            <div class="row my-3 g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="{% static "images/g.d1.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Graphic Design Fundamentals</h5>
+                            <a href="##" class="btn btn-outline-primary">Start Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/g.d10.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Adobe Photoshop Masterclass</h5>
+                                <a href="##" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/g.d6.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Adobe Illustrator for Beginners</h5>
+                                <a href="##" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/g.d2.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Canva Design for Social Media</h5>
+                                <a href="##" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/g.d5.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Branding and Logo Design</h5>
+                                <a href="##" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/g.d7.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Typography Essentials</h5>
+                                <a href="##" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="{% static "images/g.d4.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Motion Graphics Basics</h5>
+                                <a href="##" class="btn btn-outline-primary">Start Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,142 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 2: HTML Document Structure{% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/html1.jpeg" %}" id="DOCTYPE" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Understanding <code style="color: var(--text-color)">&lt;!DOCTYPE html&gt;</code></h4>
+            <p style="text-indent: 20px">This is the first line in every HTML document.</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center">
+                        <code>&lt;!DOCTYPE html&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>What this means: <br> "This document is written in HTML5".</p>
+            <p><strong>Key Idea: </strong> <br>It is not a tag. <br id="Html_tag">It helps the browser display your page correctly.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> The <code style="color: var(--text-color)">&lt;html&gt;</code> tag</h4>
+            <p style="text-indent: 20px">This is the root of the HTML document. Everything on your webpage must be inside it.</p>
+            <div class="card" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center" id="Head_tag">
+                        <code>&lt;html&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> The <code style="color: var(--text-color)">&lt;head&gt;</code> tag</h4>
+            <p>Contains: 
+                <ul>
+                    <li>Page title</li>
+                    <li>Meta information</li>
+                    <li>Links to CSS or scripts</li>
+                </ul>
+            </p>
+            <div class="card" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center">
+                        <code>&lt;head&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="Title_tag">Important: <br> Content inside <code style="color: var(--text-color)">&lt;head&gt;</code> is not shown on the webpage.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> The <code style="color: var(--text-color)">&lt;title&gt;</code> tag</h4>
+            <p style="text-indent: 20px">Sets the name of the page. Appears on the browser tab.</p>
+            <div class="card" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center">
+                        <code>&lt;title&gt;&lt;/title&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>Example: <br> If you write: </p>
+            <div class="card" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center">
+                        <code>&lt;title&gt;Precious's Site&lt;/title&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p id="Body_tag">Your browser tab will show: Precious's Site</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> The <code style="color: var(--text-color)">&lt;body&gt;</code> section</h4>
+            <p>This is where everything visible goes:
+                <ul>
+                    <li>Text</li>
+                    <li>Images</li>
+                    <li>Links</li>
+                    <li>Buttons</li>
+                </ul>
+            </p>
+            <div class="card" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-center">
+                        <code>&lt;body&gt;&lt;/body&gt;</code>
+                    </p>
+                </div>
+            </div>
+            <p>Example: </p>
+            <div class="card" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h1&gt;Hello&lt;/h1&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;Welcome to my page&lt;/p&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <h4 style="margin-top: 150px; text-decoration: underline;text-align: center;">Full Structure Example</h4>
+            <center>
+                <div class="card mt-3" style="max-width: 40rem;">
+                    <div class="card-body col-md-12">
+                        <p class="card-text text-start">
+                            <code>&lt;!DOCTYPE html&gt;</code> <br>
+                            <code>&lt;html&gt;</code> <br>
+                            <code>&lt;head&gt;</code> <br>
+                            <code style="margin-left: 20px;">&lt;title&gt;My Page&lt;/title&gt;</code> <br>
+                            <code>&lt;/head&gt;</code> <br>
+                            <code>&lt;body&gt;</code> <br>
+                            <code style="margin-left: 20px;">&lt;h1&gt;Hello Precious&lt;/h1&gt;</code> <br>
+                            <code style="margin-left: 20px;">&lt;p&gt;This is your page&lt;/p&gt;</code> <br>
+                            <code>&lt;/body&gt;</code> <br>
+                            <code>&lt;/html&gt;</code> <br>
+                        </p>
+                    </div>
+                </div>
+            </center>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                <code style="color: var(--text-color)">&lt;!DOCTYPE html&gt;</code> - tells browser HTML5.<br>
+                <code style="color: var(--text-color)">&lt;html&gt;</code> - root element. <br>
+                <code style="color: var(--text-color)">&lt;head&gt;</code> - hidden info. <br>
+                <code style="color: var(--text-color)">&lt;title&gt;</code> - tab name. <br>
+                <code style="color: var(--text-color)">&lt;body&gt;</code> - visible comtent <br>
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,153 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 1: Introduction to JavaScript {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java3.jpeg" %}" id="variables" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Variables (let, const, var)</h4>
+            <p style="text-indent: 30px">Variables are containers for storing data values. JS uses three ways to declare variables:</p>
+            <ul>
+                <li>let - can change value later.
+                    <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-warning-emphasis">let name = "Minnie";</code> <br>
+                                <code class="text-warning-emphasis">name = "Precious"; // updated value</code> <br>
+                                <code class="text-warning-emphasis">console.log(name); // Precious</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>const - cannot change value once set.
+                    <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-warning-emphasis">const birthYear = "2008";</code> <br>
+                                <code class="text-warning-emphasis">console.log(birthYear); // 2008</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>var - older way, can also change value, but less recommended.
+                    <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-warning-emphasis">var name = "17";</code> <br>
+                                <code class="text-warning-emphasis">age = "18";</code> <br>
+                                <code class="text-warning-emphasis">console.log(age); // 18</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <p id="strings">Best practice: Use let or const instead of var.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Strings</h4>
+            <p>Strings = text data, always inside quotes '' or "".</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let greeting = "Hello Precious";</code> <br>
+                        <code class="text-warning-emphasis">console.log(greeting);</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Can combine strings using concatenation (+).</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let firstName = "Minnie";</code> <br>
+                        <code class="text-warning-emphasis">let lastName = "Teddy";</code> <br>
+                        <code class="text-warning-emphasis">console.log(firstName + " " + lastName); // Minnie Teddy</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p style="text-indent: 40px;">" " indicates space.</p>
+            <p>Can also use template literals ()</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let firstName = "Minnie";</code> <br>
+                        <code class="text-warning-emphasis">let lastName = "Teddy";</code> <br>
+                        <code id="numbers" class="text-warning-emphasis">console.log(Hello, ${firstName} ${lastName}!)</code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Numbers</h4>
+            <p>Numbers = numeric data (integers or decimals).</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let age = 17;</code> <br>
+                        <code class="text-warning-emphasis">let price = 199.99;</code> <br>
+                        <code class="text-warning-emphasis">console.log(age, price);</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Can perform math operations: +, -, *, /, %</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">console.log(10 + 5); // 15</code> <br>
+                        <code id="booleans" class="text-warning-emphasis">console.log(8 - 7); // 1</code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Booleans</h4>
+            <p>Boolean = true or false. It is used in conditions.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">let isStudent = true;</code> <br>
+                        <code class="text-warning-emphasis">let isGraduated = false;</code> <br>
+                        <code id="arrays" class="text-warning-emphasis">console.log(isStudent, isGraduated);</code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Arrays</h4>
+            <p>Arrays = stores multiple values in a single variable</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">indexNumber =["    0    ", "     1     ", "     2     "];</code> <br>
+                        <code class="text-warning-emphasis">let fruit = ["apple", "banana", "mango"];</code> <br>
+                        <code class="text-warning-emphasis">console.log(fruits[0]); //apple</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>You can add, remove, or loop through items in array.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Variables store data values: let, const, var. <br>
+                Data types: strings, numbers, booleans, arrays. <br>
+                Strings can be concatenated or use template literals. <br>
+                Arrays hold multiple elements. <br>
+                Booleans are used for true/false decisions. 
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

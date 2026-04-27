@@ -1,0 +1,148 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 6: Flexbox Layout {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/css2.jpeg" %}" id="flexbox_introduction" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Introduction to Flexbox</h4>
+            <p style="text-indent: 30px">Flexbox is a CSS layout system to arrange elements efficiently in a row or column. It makes aligning, spacing, and distributing items much easier than old methods (like floats). <br> Flexbox works on a parent container and its direct children.</p>
+            <p>Why use Flexbox: </p>
+            <ul>
+                <li>Center items easily.</li>
+                <li>Controls spacing between elements.</li>
+                <li>Change direction (row/column) without changing HTML.</li>
+                <li id="flex_container">Makes responsive design easier.</li>
+            </ul>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Flex Container</h4>
+            <p>To use Flexbox, set the parent element as a flex container: </p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div class="container"&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div&gt;Item 1&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div&gt;Item 2&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px">&lt;div&gt;Item 3&lt;/div&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.container{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">display: flex;</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>All direct children becomes flex items.</p>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="display: flex">
+                        <div>Item 1</div>
+                        <div>Item 2</div>
+                        <div>Item 3</div>
+                    </div>
+                </div>
+            </div>
+            <p id="flex_direction">By default items are arranged horizontally in a row.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Flex Direction</h4>
+            <p>flex-direction controls main axis (row or column).</p>
+            <p>Values: <br> row - horizontal(default). <br> row-reversed - horizontal reversed. <br> column - vertical. <br> column-reverse - vertical reversed.</p>
+            <div class="card mb-3" style="max-width: 35rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.container{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">display: flex;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">flex-direction: column; /* items stacked vertical */</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="display: flex; flex-direction: column;">
+                        <div>Item 1</div>
+                        <div>Item 2</div>
+                        <div id="justify_content">Item 3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Justify Content</h4>
+            <p>Controls alignment along the main axis (row or column).</p>
+            <p>Values: <br>flex-start - align to start. <br>flex-end - align to end. <br> center - center. <br>space-between - equal spaces between items. <br>space-around: equal space around items.</p>
+            <div class="card mb-3" style="max-width: 35rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.container{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">display: flex;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">justify-content: space-between; /* spread items evenly */</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div class="card-text" style="display: flex; justify-content: space-between">
+                        <div>Item 1</div>
+                        <div>Item 2</div>
+                        <div id="align_items">Item 3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Align Items</h4>
+            <p>Controls alignment along the cross axis (perpendicular to main axis).</p>
+            <p>Values: <br>flex-start - top(for-now) <br> flex-end - bottom(vertically). <br> center - center vertically. <br> stretch - stretch items to container.</p>
+            <div class="card mb-3" style="max-width: 35rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.container{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">display: flex;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">align-items: center; /* items verticaly centered */</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">height: 200px; /* container height for cross axis.</code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Flexbox = flexbox layout system. <br>
+                Flex container = display: flex <br>
+                Flex direction: row, row-reverse, column, column-reverse. <br>
+                Justify content: align along main axis. <br>
+                Align items: align along cross axis. <br>
+                Use Flexbox for responsve layouts and easy alignment.
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

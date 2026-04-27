@@ -1,0 +1,79 @@
+{% extends "main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} About Us {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/images (7).jpeg" %}" alt="No Image Found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+        <div class="first">
+            <h2 class="fw-bold" style="font-family: 'Poppins', sans-serif;">Our History</h2>
+            <p style="font-family: 'Inter', sans-serif;"> 
+                SkillHub was founded with a simple but powerful idea: learning should be practical, accessible and impactful. What began as a vision to create a better way to teach digital and professional skills quickly evolved into a platform designed to empower learners at every stage of their journey.
+            </p>
+            <p style="font-family: 'Inter', sans-serif;">
+                Recognizing the growing demand for technology-driven skills and career-ready knowledge, SkillHub was built to bridge traditional education and real-world application. From its early development stages, the focus has always been on delivering structured, beginner-friendly content that builds confidence while maintaining professional standards.
+            </p>
+            <p style="font-family: 'Inter', sans-serif;">
+                Over time, SkillHub has expanded its course categories to include programming, UI/UX design, business and marketing, graphic design, amd computer fundamentals. Each addition reflects in an ever-evolving digital landscape. <br> Today, SkillHub continues to grow as a trusted learning platform dedicated to helping individuals acquire practical skills, advance their careers, and turn their ambitions into reality.
+            </p>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-6 col-sm-6 col-12">
+                <h2 class="fw-bold" style="font-family: 'Poppins', sans-serif;">Our Vision</h2>
+                <p style="font-family: 'Inter', sans-serif;">
+                    Our vision is to become a leading global platform for skill-based education, recognized for innovation, excellence, and impact. We aspire to build a community where learners from all walks of life can unlock their potential, develop in-demand skills, and create meaningful opportunities for themselves.
+                </p>
+                <p style="font-family: 'Inter', sans-serif;">
+                    SkillHub envisions a future where education is not just about transformation _ where individuals are empowered to build careers, start businesses and confidently pursue their dreams.
+                    <br>
+                    We strive to be more than just an online learning platform. We aim to be a hub of growth, creativity, and continuous development that inspires lifelong learning.
+                </p>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-12">
+                <h2 class="fw-bold" style="font-family: 'Poppins', sans-serif;">Our Mission</h2>
+                <p style="font-family: 'Inter', sans-serif;">
+                    At SkillHub, our mission is to make quality digital education accessible, practical, and empowering for everyone, regardless of their background or experience level. We are committed to bringing the gap between learning and real-world skills by providing structured, easy-to-understand courses in technology, business, design, and professional development.
+                </p>
+                <p style="font-family: 'Inter', sans-serif;">
+                    We believe that learning should not be confusing, overwhelmimg or limited to a privileged few. That is why SkillHub focuses on simplifying complex topics, offering hands-on training, and creating a supportive learning environment where students can grow with confidence.
+                </p>
+                <p style="font-family: 'Inter', sans-serif;">
+                    Our goal is to equip learners with the knowledge, tools, and mindset needed to thrive in today's fast-changing digital world. Through expert instructors, practical projects, and continuously updated content, we aim to transform curiosity into competence and ambition into achievement.
+                </p>
+            </div>
+        </div>
+
+        <div class="my-5">
+            <h3 class="fw-bold" style="font-family: 'Poppins', sans-serif;">What the site does</h3>
+            <p style="font-family: 'Inter', sans-serif;">SkillHub is an online learning platform that provides practical, skill-based courses in programming, design, business and digital technology. We help learners gain real-world knowledge through structured lessons and hands-on projects.</p>
+        </div>
+
+        <div class="my-5">
+            <h3 class="fw-bold" style="font-family: 'Poppins', sans-serif;">Who it helps</h3>
+            <p style="font-family: 'Inter', sans-serif;">SkillHub helps students, beginners, and aspiring professionals who want to build valuable digital skills, improve their career opportunities, or start their journey in tech and business.</p>
+        </div>
+
+        <div class="my-5">
+            <h3 class="fw-bold" style="font-family: 'Poppins', sans-serif;">Why it exists</h3>
+            <p style="font-family: 'Inter', sans-serif;">SkillHub exists to make quality education simple, accessible and practical. We aim to bridge the gap between learning theory and applying real-world skills.</p>
+        </div>
+
+        <div class="my-5">
+            <h3 class="fw-bold" style="font-family: 'Poppins', sans-serif;">What make it special</h3>
+            <p style="font-family: 'Inter', sans-serif;">What makes SkillHub special is the focus on beginner-friendly teaching, practical learning, and clear step-by-step guidance that builds confidence while developing real, usable skills.</p>
+        </div>
+
+        <div>
+            <p style="font-size: 20px; font-weight: 500;">Ready to level up your skills and unlock new opportunities? <br> Join SkillHub today and start building the future you deserve. Learn practical skills, gain confidence, and take control of your growth _ one course at a time.</p>
+            <a href="/sign_up" class="btn btn-outline-primary">Join SkillHub</a>
+        </div>
+    </div>
+
+{% endblock content %}

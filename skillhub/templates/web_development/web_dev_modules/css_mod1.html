@@ -1,0 +1,150 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 1: Introduction to CSS {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/css2.jpeg" %}" id="css_definition" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> What is CSS?</h4>
+            <p style="text-indent: 30px">CSS stands for Cascading Style Sheets. It is used to style HTML elements e.g colors, fonts, spacing, layout, and positioning. Without CSS, HTML pages are plain and unstyled.</p>
+            <p>CSS "cascades" because styles can override each other based on specificity and order. <br> Example: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;p </code>
+                        <code class="text-primary-emphasis"> style="color: red;"</code>
+                        <code>&gt;This is a red text&lt;/p&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p style="color: red;" id="css_with_html">This is a red text</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> How CSS Works with HTML</h4>
+            <p>HTML - structure/content of the page.</p>
+            <p>CSS - style/presentation. <br> Browser combines both to show styled webpage.</p>
+            <p>Example : HTML + CSS </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;head&gt;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">&lt;style&gt;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 40px;">p{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 60px;">color: blue; </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 60px;">font-size: 18px; </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 40px;">} </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">&lt;/style&gt;</code> <br>
+                        <code>&lt;/head&gt;</code> <br>
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;Hello, World!&lt;/p&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p style="color: blue; font-size: 18px;">Hello, World!</p>
+                </div>
+            </div>
+            <p id="adding_css">p {color: blue; font-size: 18px;} - styles all <code style="color: var(--text-color)">&lt;p&gt;</code> elements.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Ways to Add CSS</h4>
+            <p>Inline CSS - style applied directly on the element.</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;p </code>
+                        <code class="text-primary-emphasis">style="color: green;"</code>
+                        <code>&gt;Hello&lt;/p&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Internal CSS - style written inside <code style="color: var(--text-color)">&lt;style&gt;</code> in <code style="color: var(--text-color)">&lt;head&gt;</code> in your .html file.</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;head&gt;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">&lt;style&gt;</code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 40px;">h1{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 60px;">color: purple; </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 60px;">text-align: center; </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 40px;">} </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">&lt;/style&gt;</code> <br>
+                        <code>&lt;/head&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>External CSS - style in seperate .css file and linked in HTML.</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;head&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;link rel="stylesheet" href="style.css"&gt;</code> <br>
+                        <code>&lt;/head&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="creating_first_cssfile">It is recommended for large projects because it is cleaner and reuseable.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Setting Up Your First CSS File</h4>
+            <ul>
+                <li>Create a file style.css in your project folder.</li>
+                <li>Write your first CSS rule: 
+                    <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code class="text-primary-emphasis">body{ </code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;">color: #f0f0f0;</code> <br>
+                                <code class="text-primary-emphasis" style="margin-left: 20px;">font-family: Arial, sans-serif; </code> <br>
+                                <code class="text-primary-emphasis">} </code> <br>
+                            </p>
+                        </div>
+                    </div>
+                    <p>This style applies to the body of your website.</p>
+                </li>
+                <li>Link to your HTML - write this in your index.html: 
+                    <div class="card mb-3" style="max-width: 27rem; margin: 20px 40px;">
+                        <div class="card-body col-md-12">
+                            <p class="card-text text-start">
+                                <code>&lt;head&gt;</code> <br>
+                                <code style="margin-left: 20px;">&lt;link rel="stylesheet" href="style.css"&gt;</code> <br>
+                                <code>&lt;/head&gt;</code> <br>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>Open HTML in browser - styles applied!</li>
+            </ul>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                CSS = style in HTML. <br>
+                Three ways to add CSS: inline, internal, and external. <br>
+                Use external CSS for bigger projects. <br>
+                CSS controls color, fonts, spacing, layout.
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

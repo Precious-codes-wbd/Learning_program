@@ -1,0 +1,171 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} User Dashboard {% endblock title %}
+
+{% block content %}
+
+    <div class="image">
+        <div class="text">
+            <h1 style="font-size: 50px;">Welcome to skillHub</h1>
+            <p style="font-size: 16px">Learn skills. Build confidence. Grow ahead.</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h3 class="fs-2 mb-4">Courses Categories</h3>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg border-primary-subtle p-2 border-3">
+                    <img src="{% static "images/webdev5.jpg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <a href="/courses#web_dev" class="btn btn-outline-primary">8 courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg border-primary-subtle p-2 border-3">
+                    <img src="{% static "images/graphic1.png" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Graphic Design</h5>
+                        <a href="/courses#graphic_design" class="btn btn-outline-primary">7 courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg border-primary-subtle p-2 border-3">
+                    <img src="{% static "images/phonedev2.jpeg" %}"  class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobile App Development</h5>
+                        <a href="/courses#app_dev" class="btn btn-outline-primary">6 courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg border-primary-subtle p-2 border-3">
+                    <img src="{% static "images/data2.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Science</h5>
+                        <a href="/courses#data_sci" class="btn btn-outline-primary">7 courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg border-primary-subtle p-2 border-3">
+                    <img src="{% static "images/bus3.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Business and Marketing</h5>
+                        <a href="/courses#bus_market" class="btn btn-outline-primary">7 courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg border-primary-subtle p-2 border-3">
+                    <img src="{% static "images/pbasics1.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Programming Basics</h5>
+                        <a href="/courses#programming_basics" class="btn btn-outline-primary">6 courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg border-primary-subtle p-2 border-3">
+                    <img src="{% static "images/combasics2.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Basics</h5>
+                        <a href="/courses#computer_basics" class="btn btn-outline-primary">6 courses</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 shadow-lg border-primary-subtle p-2 border-3">
+                    <img src="{% static "images/ui1.jpeg" %}" class="card-img-top" style="height:120px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">UI\UX Design</h5>
+                        <a href="/courses#ui_ux" class="btn btn-outline-primary">6 courses</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    <div class="mx-4 mt-5" style="background: linear-gradient(to right, #007bff, #ffffff); border-radius: 15px; padding: 40px 30px;">
+        <h4 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.4rem;">Continue learning and grow your skills today</h4>
+        <div class="d-flex gap-3 align-items-center flex-wrap">
+            <form class="d-flex flex-grow-1" role="search">
+                <input class="form-control" type="search" placeholder="Search courses...." aria-label="Search">
+                <button class="btn btn-dark" type="submit">Search</button>
+            </form>
+            <a href="/courses" class="btn btn-outline-dark">Continue Learning</a>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="card d-flex flex-row my-3 mx-3 border shadow-sm" style="height: 400px; min-width: 400px;">
+            <div>
+                <img src="{% static "images/webdev4.jpg" %}" class="card-img" style="height: 400px;  object-fit: cover;" alt="...">
+            </div>
+            <div class="card-body my-5">
+                <div class="mb-5">
+                    {% comment %} empty {% endcomment %}
+                </div>
+                <h5 class="card-title">JavaScript Fundamentals</h5>
+                <p class="card-text">Instructor: Ibrahim S.</p>
+                <p class="card-text text-danger">Progress: 40%</p>
+            </div>
+        </div>
+
+        <h3>Recommended for you</h3>
+        <p style="font-weight: bold; font-size: 18px;">Since you are learning web development, you might like:</p>
+
+        <div class="row g-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-lg">
+                    <img src="{% static "images/ui2.jpeg" %}" class="card-img-top" style="height:300px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">User Experience Design Fundamentals</h5>
+                        <p>Instructor: James A.
+                        <br>4.5 <i class="fa fa-star" aria-hidden="true"></i> | 900 students </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-lg">
+                    <img src="{% static "images/pbasics2.jpg" %}" class="card-img-top" style="height: 300px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Python for Beginners</h5>
+                        <p>Instructor: Ted O.
+                        <br>4.5 <i class="fa fa-star" aria-hidden="true"></i> | 1,280 students </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="card h-100 shadow-lg">
+                    <img src="{% static "images/webdev1.jpeg" %}" class="card-img-top" style="height:300px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Django Web Development</h5>
+                        <p>Instructor: Ibrahim S.
+                        <br>4.9 <i class="fa fa-star" aria-hidden="true"></i> | 1,200 students </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}

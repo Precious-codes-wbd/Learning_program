@@ -1,0 +1,213 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 2: CSS Selectors {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/css2.jpeg" %}" id="element_selectors" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Element Selectors</h4>
+            <p style="text-indent: 30px">Element selector targets all elements of a certain type. <br> Syntax : element {property: value;}</p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;This is a paragraph&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;Another paragraph&lt;/p&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">p{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">color: blue; </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">font-size: 18px; </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Both <code style="color: var(--text-color)">&lt;p&gt;</code> tags turn blue and have 18px font size. The style is for all <code style="color: var(--text-color)">&lt;p&gt;</code> elements.</p>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p style="color: blue; font-size: 18px;">This is a paragraph</p>
+                    <p style="color: blue; font-size: 18px;" id="class_selectors">Another paragraph</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Class Selectors</h4>
+            <p style="text-indent: 30px">Class selector targets elements with a specific class. <br> Syntax : .classname {property: value;}</p>
+            <p>Example: </p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p class="highlight"&gt;Important text&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p class="highlight"&gt;Another important text&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;Normal text&lt;/p&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">.highlight{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">background-color: yellow; </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">font-weight: bold; </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p style="background-color: yellow; font-weight: bold;">Important text</p>
+                    <p style="background-color: yellow; font-weight: bold;">Another important text</p>
+                    <p>Normal text</p>
+                </div>
+            </div>
+            <p id="id_selectors">Only elements with class highlight are styled and class selectors are styled using "." - .highlight</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> ID Selectors</h4>
+            <p style="text-indent: 30px">ID selector targets a single element with a unique ID. <br> Syntax : #idame {property: value;}</p>
+            <p>Example: </p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h1 id="main-title"&gt;Welcome to SkillHub&lt;/h1&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">#main-title{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">color: purple; </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">text-align: center; </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 27rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <h1 style="color: purple; text-align: center;">Welcome to SkillHub</h1>
+                </div>
+            </div>
+            <p id="grouping_selectors">Only the element with ID main-title is styled and ID selectors are styled using "#" - #main-title <br> Reminder: IDs should be unique on a page.</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> Grouping Selectors</h4>
+            <p style="text-indent: 30px">Grouping selectors apply the same style to multiple elements. <br> Syntax : selector1, selector2 {property: value;}</p>
+            <p>Example: </p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 25rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h1&gt;Heading&lt;/h1&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;Paragraph&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;span&gt;Span text&lt;/span&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 27rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">h1, p, span{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">font-family: Arial, sans-serif; </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">color: green; </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <h1 style="color: green; font-family: Arial, sans-serif;">Heading</h1>
+                    <p  style="color: green; font-family: Arial, sans-serif;">Paragraph</p>
+                    <span  style="color: green; font-family: Arial, sans-serif;">Span text</span>
+                </div>
+            </div>
+            <p id="descendant_selectors">All three elements share the same font and color.</p>
+        </div>
+
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> Descendant Selectors</h4>
+            <p style="text-indent: 30px">Descendant selector targets inside another element. <br> Syntax : parent child {property: value;}</p>
+            <p>Example: </p>
+            <p>In your index.html: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;div&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;p&gt;Text inside div&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;Text outside div&lt;/p&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your style.css: </p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-primary-emphasis">div p{ </code> <br>
+                        <code class="text-primary-emphasis" style="margin-left: 20px;">color: red; </code> <br>
+                        <code class="text-primary-emphasis">} </code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 20rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <div style="color: red">
+                        <p>Text inside div</p>
+                    </div>
+                    <p>Text outside div</p>
+                </div>
+            </div>
+            <p>Only  <code style="color: var(--text-color)">&lt;p&gt;</code> inside  <code style="color: var(--text-color)">&lt;div&gt;</code> is red.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Element selector - all elements of a type. <br>
+                Class selector - elements with a class(.) <br>
+                ID selector - unique elements(#) <br>
+                Grouping selectors - same style for multiple elements. <br>
+                Descendant selectors - target elements inside another element. <br>
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}
