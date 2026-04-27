@@ -1,0 +1,87 @@
+:root{
+    --background-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: rgb(2, 11, 40);;
+    --secondary-text: #232738;
+    --primary-color: #1f53f1;
+    --accent-color: #0071ff;
+}
+
+.darkmode{
+    --background-color: #0d0d2a;
+    --base-variant: #0a1029;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #03123f;
+    --accent-color: #0071ff;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.image{
+    height: 300px;
+    max-width: 100%;
+    object-fit: cover;
+    background-image: url("../images/images\ \(6\).jpeg");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 100px;
+}
+body{
+    padding-top: 50px;
+    color: var(--text-color);
+}
+.image .text{
+    padding-top: 150px;
+    color: rgb(0, 10, 41);
+    max-width: 1000px;
+    padding-left: 30px;
+}
+.main_image{
+    transition: transform 0.3s ease;
+}
+.main_image:hover{
+    transform: scale(0.9);
+}
+.popular_categories .card{
+    border-radius: 12px;
+    box-shadow: 0.4s ease;
+    transition: transform 0.4s ease;
+}
+.popular_categories .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.row .testimonials{
+    box-shadow: 0.4 ease;
+}
+.row .testimonials:hover{
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+#featured_courses .card{
+    border-radius: 15px;
+    box-shadow: 0.4s ease;
+    transition: transform 0.4s ease;
+}
+#featured_courses .card:hover{
+    transform: scale(0.85);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+.navbar .middle a{
+    text-decoration: none;
+}
+.navbar .middle a:hover{
+    text-decoration: underline;
+}
+#theme-switch span:last-child{
+    display: none;
+}
+.darkmode #theme-switch span:first-child{
+    display: none;
+}
+.darkmode #theme-switch span:last-child{
+    display: block;
+}
