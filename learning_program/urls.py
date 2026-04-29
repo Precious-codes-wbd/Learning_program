@@ -81,6 +81,8 @@ urlpatterns = [
     path('bootstrap_module3', views.bootstrap_mod3_page),
     path('bootstrap_module4', views.bootstrap_mod4_page),
     path('bootstrap_module5', views.bootstrap_mod5_page),
+    path('advancedjs_module1', views.advancedjs__mod1_page),
+    path('advancedjs_module2', views.advancedjs__mod2_page),
     
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

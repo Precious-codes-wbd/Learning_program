@@ -322,6 +322,14 @@ def bootstrap_mod4_page(request):
 @login_required(login_url ='/login')
 def bootstrap_mod5_page(request):
     return render(request, 'web_development/web_dev_modules/bootstrap_mod5.html')
+
+@login_required(login_url ='/login')
+def advancedjs__mod1_page(request):
+    return render(request, 'web_development/web_dev_modules/advancedjs_mod1.html')
+
+@login_required(login_url ='/login')
+def advancedjs__mod2_page(request):
+    return render(request, 'web_development/web_dev_modules/advancedjs_mod2.html')
 # =========================================================== ADMIN ======================================================================
 def admin_signup_page(request):
     if request.method == 'POST':

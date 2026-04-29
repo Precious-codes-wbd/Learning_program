@@ -1,0 +1,81 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 1: Understanding the DOM {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java2.jpeg" %}" id="Definition_of_DOM" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> What is the DOM?</h4>
+            <p>DOM = Document Object Model</p>
+            <p>It is a tree-like structure representing your HTML page. Every element, attribute, text node is a node in the DOM.</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;!DOCTYPE html&gt;</code> <br>
+                        <code>&lt;html&gt;</code> <br>
+                        <code>&lt;head&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;title&gt;DOM Example&lt;/title&gt;</code> <br>
+                        <code>&lt;/head&gt;</code> <br>
+                        <code>&lt;body&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h1&gt;Hello World&lt;/h1&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;This is a paragraph.&lt;/p&gt;</code> <br>
+                        <code>&lt;/body&gt;</code> <br>
+                        <code>&lt;/html&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>DOM tree looks like: <br> html <br> head <br> title <br> body <br> h1 <br id="DOM_tree_structure"> p</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> DOM Tree Structure</h4>
+            <p>Parent <i class="fa fa-arrow-right" aria-hidden="true"></i> Child <i class="fa fa-arrow-right" aria-hidden="true"></i> Sibling relationship</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code>&lt;div id="parent"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p id="child1"&gt;Child 1&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p id="child2"&gt;Child 2&lt;/p&gt;</code> <br>
+                        <code>&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>div#parent - parent <br> p#child1 & p#child2 - children <br> Child1 & Child2 - siblings</p>
+            <p id="selecting_elements">Understanding this helps in selecting and manipulating elements.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Selecting Elements</h4>
+            <p style="text-indent: 30px;">JavaScript interacts with elements using selectors.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const heading = document.getElementById("myHeading");</code> <br>
+                        <code class="text-warning-emphasis">const paragraphs = document.getElementsByTagName("p");</code> <br>
+                        <code class="text-warning-emphasis">const firstDiv = document.querySelector("div");</code> <br>
+                        <code class="text-warning-emphasis">const allDivs = document.querySelectorAll("div");</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>getElementById("id") - select one element by ID. <br> getElementsByTagName("tag") - selects all elements by tag. <br> querySelector("selector") - selects first matching element <br> querySelectorAll("selector") - selects all matching elements.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                DOM is a tree representation of your webpage. <br>
+                Elements have parent, child, and sibling relationships. <br>
+                Selecting elements is the first step to manipulating the page with Javascript. <br>
+                Understanding the DOM unlocks interactive web pages.
+            </p>
+        </div>
+
+    </div>
+{% endblock content %}

@@ -1,0 +1,160 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 2: DOM Selection Methods{% endblock title %}
+
+{% block content %}
+
+<div>
+        <img src="{% static "images/java2.jpeg" %}" id="get_ElementBy_Id" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> getElementById()</h4>
+            <p>Selects a single element by its id.</p>
+            <p>In your Index.html: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code style="margin-left: 20px;">&lt;h1 id="myHeading"&gt;My Heading&lt;/h1&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;A paragraph&lt;/p&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your script.js: </p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const heading = document.getElementById("myHeading");</code> <br>
+                        <code class="text-warning-emphasis">heading.style.color = "blue";</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <h1 id="myHeading">My Heading</h1>
+                        <p>A paragraph</p>
+                    </p>
+                </div>
+            </div>
+            <p id="get_ElementBy_ClassName">Returns one element only.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> getElementByClassName()</h4>
+            <p>Selects all elements with a specific class.</p>
+            <p>In your Index.html: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code style="margin-left: 20px;">&lt;p class="box"&gt;Box 1&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p class="square"&gt;A paragraph&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p class="box"&gt;Box 2&lt;/p&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your script.js: </p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const boxes = document.getElementByClassName("box");</code> <br>
+                        <code class="text-warning-emphasis">boxes[0].style.backgroundColor = "yellow"; // first box</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <p class="box">Box 1</p>
+                        <p class="square">A paragraph</p>
+                        <p class="box">Box 2</p>
+                    </p>
+                </div>
+            </div>
+            <p>Returns an HTML Collection - like an array but not exactly. <br id="get_ElementsBy_TagName"> Use [index] to access a specific element.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> getElementsByTagName()</h4>
+            <p>Selects all elements with a specific tag name.</p>
+            <p>In your Index.html: </p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code style="margin-left: 20px;">&lt;p&gt;First paragraph&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;p&gt;Second paragraph&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;h1&gt;Heading&lt;/h1&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your script.js: </p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const paragraphs = document.getElementByTagName("p");</code> <br>
+                        <code class="text-warning-emphasis">paragraphs[1].innerText = "Changed text"; // second paragraph</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <p>First Paragraph</p>
+                        <p>Changed text</p>
+                        <p>Third paragraph</p>
+                    </p>
+                </div>
+            </div>
+            <p id="query_Selector">Returns HTMLCollection</p>
+        </div>
+
+        <div class="lesson4" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 4:</strong> querySelector()</h4>
+            <p>Selects the first element that matches a CSS selector.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const firstDiv = document.querySelector(".container");</code> <br>
+                        <code class="text-warning-emphasis">firstDiv.style.border = "2px solid red";</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="query_Selector_All">Works with IDs, classes, tags, or combinations.</p>
+        </div>
+
+        <div class="lesson5" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 5:</strong> querySelectorAll()</h4>
+            <p>Selects all elements that match a CSS selector.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const allDivs = document.querySelectorAll("div.container");</code> <br>
+                        <code class="text-warning-emphasis">allDivs.forEach(div => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">div.style.padding = "10px";</code> <br>
+                        <code class="text-warning-emphasis">});</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Returns a NodeList - can use forEach() <br> Very flexible and modern way to select multiple elements.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                getElementById() - select one element by ID. <br>
+                getElementByClassName() - selects all elements by class. <br>
+                getElementsByTagName() - selects all elements by tag. <br>
+                querySelector() - selects first element by CSS selector. <br>
+                querySelectorAll() - selects all elements by CSS selector.
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}

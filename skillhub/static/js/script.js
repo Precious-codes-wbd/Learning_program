@@ -23,18 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("JavaScript is working!!");
 
 })
-
-// Example: simple verification
-(() => {
-    'use strict'
-    const forms = document.querySelectorAll('.needs-validation')
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event =>{
-            if (!form.checkValidity()){
-                event.preventDefault()
-                event.stopPropagation()
-            }
-            form.classList.add('was-validated')
-        }, false)
-    })
-})()
+console.log("Precious")
+const heading = document.getElementById("myHeading");
+heading.style.color ="blue";
+const boxes = document.getElementsByClassName("box");
+boxes[0].style.backgroundColor = "yellow";
