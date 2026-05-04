@@ -1,0 +1,177 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 6: Interactive Projects {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java2.jpeg" %}" id="image_slider" alt="Image not found" style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Image Slider</h4>
+            <p>Image slider shows multiple images one at a time with navigation</p>
+            <p>In your Index.html: </p>
+            <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code style="margin-left: 20px;">&lt;div id="slider"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;img class="slide" src="Images/picture1" alt"Image Slider" style="height: 450px; width: 100%; object-fit: cover; display: block;"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;img class="slide" src="Images/picture2" alt"Image Slider" style="height: 450px; width: 100%; object-fit: cover; display: block;"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;img class="slide" src="Images/picture3" alt"Image Slider" style="height: 450px; width: 100%; object-fit: cover; display: block;"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;button id="next" class="btn btn-primary" style="margin-top: 10px;"&gt;Next&lt;/button&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your script.js: </p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const slides = document.querySelectorAll(".slide");</code> <br>
+                        <code class="text-warning-emphasis">let current = 0;</code> <br>
+                        <code class="text-warning-emphasis">document.getElementById("next").addEventListener("click", () => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">slides[current].style.display ="none";</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">current = (current + 1) % slides.length;</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">slides[current].style.display ="block";</code> <br>
+                        <code class="text-warning-emphasis">});</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <div id="slider">
+                            <img src="{% static "images/java2.jpeg" %}" alt="Image Slider" class="slide" style="height: 450px; width: 100%; object-fit: cover; display: block;">
+                            <img src="{% static "images/java1.jpeg" %}" alt="Image Slider" class="slide" style="height: 450px; width: 100%; object-fit: cover; display: none;">
+                            <img src="{% static "images/java3.jpeg" %}" alt="Image Slider" class="slide" style="height: 450px; width: 100%; object-fit: cover; display: none;">
+                            <button class="btn btn-primary" style="margin-top: 10px" id="next">Next</button>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <p>How it works: </p>
+            <p>Only one image is visible at a time and that is because of the CSS property: display. <br> Clicking next shows the next image.</p>
+            <p> The images are called using querySelectorAll(.slide), then the button is called and given a function - click so when clicked it should set the current images which is 0 to be display:none.</p>
+            <p> After that it should add 1 i.e bring/call the next image and give it display:block. <br id="to_do_list"> % slides.length - loops back to the first image.</p>
+        </div>
+
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> To-Do List App</h4>
+            <p>To do app lets users add and remove tasks.</p>
+            <p>In your Index.html: </p>
+            <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code style="margin-left: 20px;">&lt;input type="text" id="taskInput"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;button id="addTask" class="btn btn-warning" style="margin-top: 10px;"&gt;Add&lt;/button&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;ul id="taskList"&gt;Add&lt;/ul&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your script.js: </p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">document.getElementById("addTask").addEventListener("click", () => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">const input = document.getElementById("taskInput");</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px">if(input.value !== ""){</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px">const li = document.createElement("li");</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px">li.innerText = input.value;</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px">li.addEventListener("click", () => li.remove());</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px">document.getElementById("taskList").appendChild(li);</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 40px">input.value = "";</code> <br>
+                        <code class="text-warning-emphasis">});</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <input type="text" id="taskInput" placeholder="Enter task">
+                        <button id="addTask" style="margin-left: 10px" class="btn btn-warning">Add</button>
+                        <ul id="taskList"></ul>
+                    </p>
+                </div>
+            </div>
+            <p>How it works: </p>
+            <p>The button is called, when clicked, the input is called. We have an if statement saying if the input is not empty, it should create an li element. Whatever is inputed in the input should be written in the list(li).</p>
+            <p>To remove a task, the list is given a function, when clicked, it should remove. <br> In module 5, we discussed creating elements, after the elements are created they are appended to the page likewise here, li is being appended to the page.</p>
+            <p id="modal_popup">When you click a task - removes it.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Modal Popup</h4>
+            <p>Popup window triggered by a button.</p>
+            <p>In your Index.html: </p>
+            <div class="card mb-3" style="max-width: 50rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code style="margin-left: 20px;">&lt;button id="openModal" class="btn btn-success"&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;div id="modal" class="modal" style="display: none"&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;div class="modal-dialog modal-dialog-centered"&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;div class="modal-content"&gt;</code> <br>
+                        <code style="margin-left: 80px;">&lt;span id="closeModal"&gt;&times;&lt;/span&gt;</code> <br>
+                        <code style="margin-left: 80px;">&lt;p&gt;This is a popup!&lt;/p&gt;</code> <br>
+                        <code style="margin-left: 60px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 40px;">&lt;/div&gt;</code> <br>
+                        <code style="margin-left: 20px;">&lt;/div&gt;</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>In your script.js: </p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const modal = document.getElementById("modal");</code> <br>
+                        <code class="text-warning-emphasis">document.getElementById("openModal").addEventListener("click" () => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">modal.style.display = "block";</code> <br>
+                        <code class="text-warning-emphasis">});</code> <br>
+                        <code class="text-warning-emphasis">document.getElementById("closeModal").addEventListener("click" () => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">modal.style.display = "none";</code> <br>
+                        <code class="text-warning-emphasis">});</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>How it will appear on your browser:</p>
+            <div class="card mb-3" style="max-width: 30rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <button id="openModal" class="btn btn-success">Open Modal</button>
+                        <div id="modal" class="modal" style="display: none">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <span id="closeModal">&times;</span>
+                                    <p>This is a popup!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <p>How it works: </p>
+            <p>The modal is a bootstrap property and is given a display property of none.</p>
+            <p>The button openModal is given a function when clicked it should given the called modal a display property of block and the span closeModal does the opposite returning the back to its former style.</p>
+            <p>Modal-dialog modal-dialog-centered centers the modal.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Image Slider: cycle through images dynamically. <br>
+                To-do list app: add/remove items interactively. <br>
+                Modal popup: show/hide content on demand. <br>
+                Combines DOM selection, events, creation/removal, and style manipulation.
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}

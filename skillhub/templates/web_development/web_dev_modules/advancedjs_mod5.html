@@ -1,0 +1,83 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 5: Creating and Removing Elements {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java2.jpeg" %}" id="creating_elements" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Creating Elements</h4>
+            <p>Use document.createElement() to make a new element.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const newDiv = document.createElement("div");</code> <br>
+                        <code class="text-warning-emphasis">newDiv.innerText = "Hello, Precious!";</code> <br>
+                        <code class="text-warning-emphasis">newDiv.style.backgroundColor = "lightgreen";</code> <br>
+                        <code class="text-warning-emphasis">newDiv.style.padding = "10px";</code> <br>
+                        <code class="text-warning-emphasis">document.body.appendChild(newDiv);</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Steps: <br> Create element - createElement("tag") <br> Add content - innerText or innerHTML <br> Add styles - style <br id="appending_elements"> Append to page - appendChild(parent)</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Appending Elements</h4>
+            <p>You can append elements inside specific parents.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const parent = document.getElementById("container");</code> <br>
+                        <code class="text-warning-emphasis">const newParagraph = document.createElement("p");</code> <br>
+                        <code class="text-warning-emphasis">newParagraph.innerText = "This is a new paragraph";</code> <br>
+                        <code class="text-warning-emphasis">parent.appendChild(newParagraph);</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="removing_elements">Parent element can be any container (div, section etc.)</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Removing Elements</h4>
+            <p>Use removeChild() to delete elements.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const container = document.getElementById("container");</code> <br>
+                        <code class="text-warning-emphasis">const paragraph = document.getElementById("p1");</code> <br>
+                        <code class="text-warning-emphasis">container.removeChild(paragraph);</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Or use element.remove() directly.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const paragraph = document.getElementById("p2");</code> <br>
+                        <code class="text-warning-emphasis">paragraph.remove();</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Lets you dynamically delete content.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                createElement() - make new HTML elements. <br> 
+                appendChild() - add elements to the page. <br>
+                removeChild() or remove() - delete elements. 
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}

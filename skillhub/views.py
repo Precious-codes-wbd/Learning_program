@@ -330,6 +330,23 @@ def advancedjs__mod1_page(request):
 @login_required(login_url ='/login')
 def advancedjs__mod2_page(request):
     return render(request, 'web_development/web_dev_modules/advancedjs_mod2.html')
+
+@login_required(login_url ='/login')
+def advancedjs__mod3_page(request):
+    return render(request, 'web_development/web_dev_modules/advancedjs_mod3.html')
+
+@login_required(login_url ='/login')
+def advancedjs__mod4_page(request):
+    return render(request, 'web_development/web_dev_modules/advancedjs_mod4.html')
+
+@login_required(login_url ='/login')
+def advancedjs__mod5_page(request):
+    return render(request, 'web_development/web_dev_modules/advancedjs_mod5.html')
+
+@login_required(login_url ='/login')
+def advancedjs__mod6_page(request):
+    return render(request, 'web_development/web_dev_modules/advancedjs_mod6.html')
+
 # =========================================================== ADMIN ======================================================================
 def admin_signup_page(request):
     if request.method == 'POST':

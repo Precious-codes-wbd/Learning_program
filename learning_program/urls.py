@@ -83,6 +83,11 @@ urlpatterns = [
     path('bootstrap_module5', views.bootstrap_mod5_page),
     path('advancedjs_module1', views.advancedjs__mod1_page),
     path('advancedjs_module2', views.advancedjs__mod2_page),
+    path('advancedjs_module3', views.advancedjs__mod3_page),
+    path('advancedjs_module4', views.advancedjs__mod4_page),
+    path('advancedjs_module5', views.advancedjs__mod5_page),
+    path('advancedjs_module6', views.advancedjs__mod6_page),
+    
     
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

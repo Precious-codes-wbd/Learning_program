@@ -1,0 +1,70 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 3: Changing Page Content {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java2.jpeg" %}" id="changing_texts" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Changing Text (innerText)</h4>
+            <p>innerText changes the visible text of an element.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const heading = document.getElementById("myHeading");</code> <br>
+                        <code class="text-warning-emphasis">heading.innerText = "Hello, Precious!";</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="changing_html">Updates the text without affecting HTML structure.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Changing HTML (innerHTML)</h4>
+            <p>innerHTML changes the HTML content inside an element.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const box = document.getElementById("box");</code> <br>
+                        <code class="text-warning-emphasis">box.innerHTML = "&lt;h2&gt;New Heading&lt;/h2&gt;&lt;p&gt;New Paragraph&lt;/p&gt;";</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="changing_styles">Lets you add new tags, links, images dynamically.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Changing Styles</h4>
+            <p>Change CSS properties directly via JavaScript.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const button = document.querySelector("button");</code> <br>
+                        <code class="text-warning-emphasis">button.style.backgroundColor = "green";</code> <br>
+                        <code class="text-warning-emphasis">button.style.color = "white";</code> <br>
+                        <code class="text-warning-emphasis">button.style.fontSize = "20px";</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p>Styles gets updated immediately on the page. Works with any CSS property. <br>(camelCase for multi-word names, e.g, backgroundColor, fontWeight)</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                innerText - update only text. <br>
+                innerHTML - update HTML content (tags included). <br>
+                style property - update CSS styles dynamically. <br>
+            </p>
+        </div>
+
+    </div>
+
+{% endblock content %}

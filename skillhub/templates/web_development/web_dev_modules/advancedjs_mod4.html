@@ -1,0 +1,78 @@
+{% extends "user_main.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %} Module 4: Event Handling {% endblock title %}
+
+{% block content %}
+
+    <div>
+        <img src="{% static "images/java2.jpeg" %}" id="click_events" alt="Image not found"style="height: 450px; width: 100%; object-fit: cover; border-radius: 10px;">
+    </div>
+
+    <div class="container my-5">
+
+        <div class="lesson1" style="font-size: 18px; font-family: 'Inter', sans-serif;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 1:</strong> Click Events</h4>
+            <p>Detects when a user clicks an element.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const button = document.getElementById("myButton");</code> <br>
+                        <code class="text-warning-emphasis">button.addEventListener("click", () => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">alert("Button clicked!");</code> <br>   
+                        <code class="text-warning-emphasis">});</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="mouse_events">addEventListener("click", function) - runs code when clicked.</p>
+        </div>
+
+        <div class="lesson2" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 2:</strong> Mouse Events</h4>
+            <p>Detects mouse actions: hover, enter, leave, move.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const box = document.getElementById("box");</code> <br>
+                        <code class="text-warning-emphasis">box.addEventListener("mouseover", () => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">box.style.backgroundColor = "yellow";</code> <br>   
+                        <code class="text-warning-emphasis">});</code> <br> <br>
+                        <code class="text-warning-emphasis">box.addEventListener("mouseout", () => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">box.style.backgroundColor = "lightblue";</code> <br>   
+                        <code class="text-warning-emphasis">});</code> <br>
+                    </p>
+                </div>
+            </div>
+            <p id="keyboard_events">mouseover - mouse enters element. <br> mouseout - mouse leaves element.</p>
+        </div>
+
+        <div class="lesson3" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h4 style="font-family: 'Poppins', sans-serif;"><strong>Lesson 3:</strong> Keyboard Events</h4>
+            <p>Detects typing or key presses.</p>
+            <div class="card mb-3" style="max-width: 40rem; margin: 20px 40px;">
+                <div class="card-body col-md-12">
+                    <p class="card-text text-start">
+                        <code class="text-warning-emphasis">const input = document.getElementById("nameinput");</code> <br>
+                        <code class="text-warning-emphasis">input.addEventListener("keydown", (event) => {</code> <br>
+                        <code class="text-warning-emphasis" style="margin-left: 20px">console.log("Key pressed:" event.key);</code> <br>   
+                        <code class="text-warning-emphasis">});</code> <br> 
+                    </p>
+                </div>
+            </div>
+            <p>keydown - when key is pressed. <br> keyup - when key is released. <br> keypress - old method, less used now.</p>
+        </div>
+
+        <div class="summary" style="font-size: 18px; font-family: 'Inter', sans-serif; margin-top: 70px;">
+            <h2 style="font-family: 'Poppins', sans-serif;">Summary</h2>
+            <p>
+                Click events - respond to clicks on buttons, links, or any element. <br>
+                Mouse events - respond when the mouse moves, enters, or leaves elements. <br>
+                Keyboard events - respond when the user types or presses keys. <br>
+                Event handling makes your site interactive and responsive to users.
+            </p>
+        </div>
+        
+    </div>
+
+{% endblock content %}
